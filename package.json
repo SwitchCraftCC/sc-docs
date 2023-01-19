@@ -1,0 +1,27 @@
+{
+  "name": "sc-docs",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "authors": {
+    "name": "Drew Edwards",
+    "email": "github@drew.contact"
+  },
+  "repository": "SwitchCraftCC/sc-docs",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src",
+    "postinstall": "patch-package"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
+    "vue-template-compiler": "^2.7.10",
+    "vuepress": "^1.5.3"
+  },
+  "dependencies": {
+    "vue": "^2.7.10",
+    "vuepress-theme-yuu": "^3.1.1"
+  }
+}
