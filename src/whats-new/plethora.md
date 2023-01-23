@@ -69,12 +69,19 @@ Inventory methods have been renamed to be more consistent with CC: Tweaked:
 - `getItemMeta` -> `getItemDetail`
 - `size` -> `getSize`
 - `getItemLimit` has been added
-- `getItem`, `drop`, `suck` are <NYI/>
+- `drop`, `suck` are <NYI/>
 - `turtle.getItemDetail()` and CC `inventory.getItemDetail()` methods now return rich item metadata provided by Plethora
 - `turtle.getInventory()` introspection method has been removed in favor of the native inventory methods
 - The hardcoded `inventory` and `ender_chest` transfer locations are not available (see 
   [CC-Tweaked#731](https://github.com/cc-tweaked/CC-Tweaked/issues/731)). Instead, use a bound introspection module to 
   push and pull from `getInventory()`, `getEquipment()` and `getEnder()`.
+- `getItem()` and `getItem().setActive()` have been removed
+
+For the player inventory *only* (`getInventory()` with an introspection module):
+
+- `getInventory().getItem(slot).consume()` has been changed to `getInventory().consume(slot)`
+- `getInventory().getItem(slot).drop([limit, [direction]])` has been changed to 
+  `getInventory().drop(slot, [limit, [direction]])`
 
 #### Meta changes
 
