@@ -54,10 +54,11 @@ joins or leaves. It will contain an array of [user objects](#user-object) as `pl
   "players": [{
     "type": "ingame",
     "name": "Yemmel",
-    "displayName": "[S] Yemmel",
+    "displayName": "Yemmel",
     "uuid": "07b382be-f2a8-4bf0-b9f5-c3a1b73c18c7",
     "group": "admin",
-    "world": "world"
+    "pronouns": "he/they",
+    "world": "minecraft:overworld"
   }]
 }
 ```
@@ -92,10 +93,11 @@ Example of an `event` packet for the [`chat_ingame`](#in-game-chat-event) event:
   "user": {
     "type": "ingame",
     "name": "Yemmel",
-    "displayName": "[S] Yemmel",
+    "displayName": "Yemmel",
     "uuid": "07b382be-f2a8-4bf0-b9f5-c3a1b73c18c7",
     "group": "admin",
-    "world": "world"
+    "pronouns": "he/they",
+    "world": "minecraft:overworld"
   }
 }
 ```
@@ -142,10 +144,11 @@ Example of an `event` packet for the [`death`](#death-event) event:
   "user": {
     "type": "ingame",
     "name": "Yemmel",
-    "displayName": "[S] Yemmel",
+    "displayName": "Yemmel",
     "uuid": "07b382be-f2a8-4bf0-b9f5-c3a1b73c18c7",
     "group": "admin",
-    "world": "world"
+    "pronouns": "he/they",
+    "world": "minecraft:overworld"
   },
   "source": { /* ...player object... */ },
 }
@@ -334,6 +337,7 @@ The [event](#event-packet) received when a player posts a message in public chat
     "uuid": "cdb33b76-a445-47a1-b13d-94f34e006243",
     "displayName": "Lemmmy",
     "group": "default",
+    "pronouns": "he/they",
     "world": "minecraft:overworld"
   },
   "time": "2022-07-12T18:54:01+01:00"
@@ -425,7 +429,8 @@ The [event](#event-packet) received when another chatbox sends a message.
     "name": "Yemmel",
     "uuid": "07b382be-f2a8-4bf0-b9f5-c3a1b73c18c7",
     "displayName": "Yemmel",
-    "group": "default"
+    "group": "default",
+    "pronouns": "he/they"
   },
   "name": "Example",
   "rawName": "Example",
@@ -461,6 +466,7 @@ owner-only caret/pipe commands: `^command`) in-game. The `command` capability is
     "uuid": "cdb33b76-a445-47a1-b13d-94f34e006243",
     "displayName": "Lemmmy",
     "group": "default",
+    "pronouns": "he/they",
     "world": "minecraft:overworld"
   },
   "command": "example",
@@ -497,7 +503,8 @@ The [event](#event-packet) received when a player joins the game.
     "name": "Lemmmy",
     "uuid": "cdb33b76-a445-47a1-b13d-94f34e006243",
     "displayName": "Lemmmy",
-    "group": "default"
+    "group": "default",
+    "pronouns": "he/they"
   },
   "time": "2022-07-12T20:10:07+01:00"
 }
@@ -526,7 +533,8 @@ The [event](#event-packet) received when a player leaves the game.
     "name": "Lemmmy",
     "uuid": "cdb33b76-a445-47a1-b13d-94f34e006243",
     "displayName": "Lemmmy",
-    "group": "default"
+    "group": "default",
+    "pronouns": "he/they"
   },
   "time": "2022-07-12T20:10:07+01:00"
 }
@@ -565,6 +573,7 @@ The [event](#event-packet) received when a player dies in-game.
     "uuid": "07b382be-f2a8-4bf0-b9f5-c3a1b73c18c7",
     "displayName": "Yemmel",
     "group": "default",
+    "pronouns": "he/they",
     "world": "minecraft:overworld"
   },
   "time": "2022-07-12T20:37:00+01:00"
@@ -595,6 +604,7 @@ The [event](#event-packet) received when a player goes AFK in-game.
     "uuid": "07b382be-f2a8-4bf0-b9f5-c3a1b73c18c7",
     "displayName": "Yemmel",
     "group": "default",
+    "pronouns": "he/they",
     "world": "minecraft:overworld"
   },
   "time": "2022-07-12T20:43:37+01:00"
@@ -625,6 +635,7 @@ The [event](#event-packet) received when a player returns from being AFK in-game
     "uuid": "07b382be-f2a8-4bf0-b9f5-c3a1b73c18c7",
     "displayName": "Yemmel",
     "group": "default",
+    "pronouns": "he/they",
     "world": "minecraft:overworld"
   },
   "time": "2022-07-12T20:55:40+01:00"
@@ -702,6 +713,10 @@ The `group` is the rank of the player. Valid groups are:
 * `moderator` - Moderators of the server
 * `admin` - Administrators of the server
 
+The `pronouns` string is the [pronouns](/faq/pronouns) set by the user by running `/pronouns`. This may be `null` if the
+player has not set any preferred pronouns. Where reasonably possible, you should attempt to use the user's preferred
+pronouns, or avoid using pronouns entirely. If you are unable to do this, you should use the player's name instead.
+
 The `world` may be the world the player is in, or `null` if this information is not available. It will be a Minecraft
 namespaced registry key, for example:
 
@@ -716,8 +731,9 @@ Example of a user object:
   "type": "ingame",
   "name": "Lemmmy",
   "uuid": "cdb33b76-a445-47a1-b13d-94f34e006243",
-  "displayName": "[S] Lemmmy", // the name as it appears in chat (includes supporter tags and nicknames)
+  "displayName": "Lemmmy", // the name as it appears in chat, may differ from `name`
   "group": "admin",
+  "pronouns": "he/they",
   "world": "minecraft:overworld"
 }
 ```
