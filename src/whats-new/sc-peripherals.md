@@ -158,11 +158,11 @@ A 2dj file is a JSON file with the following structure:
 }
 ```
 
-Poster palettes are limited to 63 colors plus one transparent color. The first color in the palette (index 1) is
-fully transparent, and the remaining 63 colors (index 2 onwards) are fully opaque but customizable. By default, the
-posters use the same palette as [vanilla maps](https://minecraft.fandom.com/wiki/Map_item_format#Base_colors), but with
-the IDs one-indexed instead. 1 is NONE, 2 is <ColorName color="rgb(127, 178, 56)">GRASS</ColorName>, 
-3 is <ColorName color="rgb(247, 233, 163)">SAND</ColorName>, etc.
+Poster palettes are limited to 63 colors plus one transparent color. The first color in the palette (index 0) is
+fully transparent, and the remaining 63 colors (index 1 onward) are fully opaque but customizable. By default, the
+posters use the same palette as [vanilla maps](https://minecraft.fandom.com/wiki/Map_item_format#Base_colors), e.g.
+0 is NONE, 1 is <ColorName color="rgb(127, 178, 56)">GRASS</ColorName>, 
+2 is <ColorName color="rgb(247, 233, 163)">SAND</ColorName>, etc.
 
 [Example .2dj file](https://p.sc3.io/umAmBHM3p2)
 
@@ -382,7 +382,7 @@ local posterPrinter = peripheral.wrap("poster_printer")
 ```
 
 The Wide Format Printer has a local buffer of what to print, referred to here as the "poster". A poster has a table of 
-palette colors (63 colors, as index 1 is always transparent) and a table of pixels (16384 entries, 128*128). After
+palette colors (63 colors, as index 0 is always transparent) and a table of pixels (16384 entries, 128*128). After
 blitting pixels to the poster with 
 [`posterPrinter.blitPixels(...)`](#posterprinter-blitpixels-x-number-y-number-pixels-table) and setting the palette with
 [`posterPrinter.blitPalette(...)`](#posterprinter-blitpalette-palette-table), the poster can be printed with 
@@ -403,13 +403,14 @@ Using [`posterPrinter.blitPixels`](#posterprinter-blitpixels-x-number-y-number-p
 significantly faster. Each individual `setPixel` call will take at least 1 tick.
 :::
 
-Sets the color of a single pixel in the poster. The color refers to the palette index and must be between 1 and 64 
-(inclusive). The pixel coordinates must be between 1 and 128 (inclusive).
+Sets the color of a single pixel in the poster. The color refers to the palette index and must be between 0 and 63 
+(inclusive). Palette index 0 is always transparent. The pixel coordinates must be between 1 and 128 (inclusive).
 
 ### `posterPrinter.blitPixels(x:number, y:number, pixels:table)`
 
 Sets multiple pixels in the poster. The pixels table must be a one-dimensional table of pixel colors, of maximum size
-16384 (128 * 128). The pixel colors refer to the palette index and must be between 1 and 64 (inclusive).
+16384 (128 * 128). The pixel colors refer to the palette index and must be between 0 and 63 (inclusive). Palette index 0 
+is always transparent.
 
 Pixels will wrap onto the next row (starting at `x` = 1) if the table is larger than the remaining space in the row. 
 This means you can set the entire poster at once by calling `blitPixels(1, 1, pixels)`, where `pixels` is a table of 
@@ -422,16 +423,16 @@ Using [`posterPrinter.blitPalette`](#posterprinter-blitpalette-palette-table) is
 faster. Each individual `setPaletteColor` call will take at least 1 tick.
 :::
 
-Sets a single color in the poster palette. The palette index must be between 1 and 64 (inclusive). The color components
-must be between 0 and 255 (inclusive). The first entry in the palette (index 1) is always transparent, and cannot be
-changed.
+Sets a single color in the poster palette. The palette index must be between 1 and 63 (inclusive). The color components
+must be between 0 and 255 (inclusive). Palette index 0 is always transparent, and cannot be changed.
 
 ### `posterPrinter.blitPalette(palette:table)`
 
-Sets the palette of the poster. The palette table must be a one-dimensional table of colors, of maximum size 64. The
-first entry in the table is ignored (as index 1 is always transparent). A color is represented as a 24-bit integer,
-where the first 8 bits are the red component, the next 8 bits are the green component, and the last 8 bits are the blue
-component. For example, `0xFF0000` is red, `0x00FF00` is green, and `0x0000FF` is blue.
+Sets the palette of the poster. The palette table must be a one-dimensional table of colors, of maximum size 63. The
+first entry in the table is index 1, as index 0 is always transparent. This means you can pass a one-indexed Lua table
+directly as a palette. A color is represented as a 24-bit integer, where the first 8 bits are the red component, the 
+next 8 bits are the green component, and the last 8 bits are the blue component. For example, `0xFF0000` is red, 
+`0x00FF00` is green, and `0x0000FF` is blue.
 
 Example:
 
