@@ -438,10 +438,9 @@ Example:
 
 ```lua
 posterPrinter.blitPalette({
-    0x000000, -- idx 1, Transparent, ignored
-    0xFF0000, -- idx 2, Red
-    0x00FF00, -- idx 3, Green
-    0x0000FF, -- idx 4, Blue
+    0xFF0000, -- idx 1, Red
+    0x00FF00, -- idx 2, Green
+    0x0000FF, -- idx 3, Blue
     -- ... up to 64 entries
 })
 ```
