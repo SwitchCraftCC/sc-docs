@@ -150,9 +150,9 @@ A 2dj file is a JSON file with the following structure:
 {
   "label":   "...", // (optional) The name of the poster, max 48 characters
   "tooltip": "...", // (optional) The tooltip of the poster in the inventory, max 256 characters
-  "palette": [/* Up to 63 colors encoded as 0xRRGGBB integers */],
-  "pixels":  [/* 16384 (128*128) array of palette indices. 1 is transparent, 
-                 2 is the first palette color, etc. */],
+  "palette": [/* Up to 63 colors encoded as 0xRRGGBB integers, the transparent index 0 should not be included */],
+  "pixels":  [/* 16384 (128*128) array of palette indices. 0 is transparent, 
+                 1 is the first palette color, etc. */],
   "width":   128, // Width of the poster in pixels, not currently used
   "height":  128  // Height of the poster in pixels, not currently used
 }
