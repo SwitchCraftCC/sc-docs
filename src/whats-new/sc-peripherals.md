@@ -441,7 +441,7 @@ posterPrinter.blitPalette({
     0xFF0000, -- idx 1, Red
     0x00FF00, -- idx 2, Green
     0x0000FF, -- idx 3, Blue
-    -- ... up to 64 entries
+    -- ... up to 63 entries
 })
 ```
 
