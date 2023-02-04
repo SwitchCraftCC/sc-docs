@@ -9,25 +9,47 @@ Quick link to .3dm to .3dj converter: <https://3dj.lem.sh/>
 :::
 
 [sc-peripherals](https://github.com/SwitchCraftCC/sc-peripherals) is a Fabric 1.19 
-[CC: Tweaked](https://github.com/cc-tweaked/cc-tweaked) peripheral mod for the SwitchCraft server. The main feature 
-currently is 3D Printers in the style of [OpenComputers](https://github.com/MightyPirates/OpenComputers). Other 
-peripherals, such as holograms, will be coming soon.
+[CC: Tweaked](https://github.com/cc-tweaked/cc-tweaked) peripheral mod for the SwitchCraft server. It adds a 3D pritner
+in the style of [OpenComputers](https://github.com/MightyPirates/OpenComputers), and a Wide Format Printer that prints 
+custom posters to display in item frames.
 
-.3dj models can be printed in-game by running `print3d <filename.3dj>` on a computer.
-
-Legacy OC 3D models can be converted using the [.3dm to .3dj converter](https://3dj.lem.sh).
+- `.3dj` models are printed in-game by running `print3d <filename.3dj>` on a computer with a 3D Printer peripheral.
+  Legacy OC 3D models can be converted using the [.3dm to .3dj converter](https://3dj.lem.sh).
+- `.2dj` images are printed in-game by running `poster <filename.2dj>` on a computer with a Wide Format Printer 
+  peripheral.
 
 ![sc-peripherals](/img/sc-peripherals.png)
 
 ## Table of Contents
 [[toc]]
 
-## Differences from OpenComputers
+## Useful links
 
-- 3D printers, ink cartridges are simpler to craft
-    - The ink cartridge recipe is crafted as a filled cartridge to begin with, but a refill recipe is still provided
-- 3D printers do not require the use of energy
-- 3D printers have externally-visible progress bars for chamelium and ink levels
+#### sc-peripherals
+- [sc-peripherals on Modrinth](https://modrinth.com/mod/sc-peripherals)
+- [sc-peripherals on CurseForge](https://www.curseforge.com/minecraft/mc-mods/sc-peripherals)
+- [sc-peripherals on GitHub](https://github.com/SwitchCraftCC/sc-peripherals)
+
+#### 3dj converters
+- [OpenComputers .3dm to .3dj converter](https://3dj.lem.sh) (Official)
+- [Blockbench plugin for exporting to .3dj](https://www.blockbench.net/plugins/sam3dj) (by [Sammy (1Turtle)](https://github.com/1Turtle))
+- [Online Blockbench to .3dj converter](https://3dj.znepb.me) (by [znepb](https://github.com/znepb))
+
+## 3D Printer
+
+<img src="/img/printer.png" alt="3D Printer" title="3D Printer"
+  style="float: right; margin-left: 16px" />
+
+The 3D Printer is a [peripheral](#peripheral-api---3d-printerr) that can be used to print 3D models in-game. It takes
+ink cartridges and chamelium to print models, which can be printed with the `print3d` program for files in the `.3dj`
+format.
+
+### Differences from OpenComputers
+
+- The 3D Printer and Ink Cartridge are simpler to craft
+    - The Ink Cartridge recipe is crafted as a filled cartridge to begin with, but a refill recipe is still provided
+- 3D Printers do not require the use of energy
+- 3D Printers have externally-visible progress bars for chamelium and ink levels
 - First-class ComputerCraft peripheral API support
 - `print3d` program included in the ROM by default via a data pack in the mod
     - Printing can be safely terminated by the user, and it will automatically stop after the current item is finished
@@ -42,7 +64,7 @@ Legacy OC 3D models can be converted using the [.3dm to .3dj converter](https://
     - Note that this is not the be-all and end-all of performance, there may still be a lot of vertex data to upload to
       the chunk
 
-## .3dj format
+### .3dj format
 
 The 3dj format was created as a more versatile alternative for processing and storing 3D models compared to the old
 OpenComputers 3dm format. It uses JSON instead of Lua tables, so it is easier to work with programmatically.
@@ -108,15 +130,51 @@ All arguments except for `shapesOff`, `shapesOn`, `bounds` and `texture` are opt
     - `state` field removed
     - `tint` in a shape may now be a number or a hex string (`RRGGBB`)
 
+## Wide Format Printer
+
+<img src="/img/poster_printer.png" alt="Wide Format Printer" title="Wide Format Printer" 
+  style="float: right; margin-left: 16px" />
+
+The Wide Format Printer is a [peripheral](#peripheral-api---wide-format-printer) that can print posters, which are 
+map-like items that can be displayed in item frames with custom images. A poster is 128x128 pixels and has a 
+customizable 64-color palette (including one transparent color). Like 3D prints, posters can have a custom label and 
+tooltip.
+
+The Wide Format Printer requires ink cartridges and paper to print posters.
+
+### .2dj format
+
+A 2dj file is a JSON file with the following structure:
+
+```json5
+{
+  "label":   "...", // (optional) The name of the poster, max 48 characters
+  "tooltip": "...", // (optional) The tooltip of the poster in the inventory, max 256 characters
+  "palette": [/* Up to 63 colors encoded as 0xRRGGBB integers */],
+  "pixels":  [/* 16384 (128*128) array of palette indices. 1 is transparent, 
+                 2 is the first palette color, etc. */],
+  "width":   128, // Width of the poster in pixels, not currently used
+  "height":  128  // Height of the poster in pixels, not currently used
+}
+```
+
+Poster palettes are limited to 63 colors plus one transparent color. The first color in the palette (index 1) is
+fully transparent, and the remaining 63 colors (index 2 onwards) are fully opaque but customizable. By default, the
+posters use the same palette as [vanilla maps](https://minecraft.fandom.com/wiki/Map_item_format#Base_colors), but with
+the IDs one-indexed instead. 1 is NONE, 2 is <ColorName color="rgb(127, 178, 56)">GRASS</ColorName>, 
+3 is <ColorName color="rgb(247, 233, 163)">SAND</ColorName>, etc.
+
+[Example .2dj file](https://p.sc3.io/umAmBHM3p2)
+
 ## Peripheral API - 3D Printer
 
-A 3D printer can be wrapped as a peripheral with the name `3d_printer`, e.g.:
+A 3D Printer can be wrapped as a peripheral with the name `3d_printer`, e.g.:
 
 ```lua
 local printer = peripheral.wrap("3d_printer")
 ```
 
-The 3D printer has a local buffer of what to print, referred to here as the "model". A model has two shape sets
+The 3D Printer has a local buffer of what to print, referred to here as the "model". A model has two shape sets
 (collections of "shapes", which are cuboids with a texture and tint), a set for the "on" state and a set for the "off" state. After adding
 the shapes to the model 
 with [`printer.addShape(...)`](#printer-addshape-minx-number-miny-number-minz-number-maxx-number-maxy-number-maxz-number-texture-string-state-boolean-tint-number) 
@@ -130,7 +188,7 @@ The two shape sets (off and on) have a limit of 128 shapes each, for a total of 
 is "off". 
 
 ::: tip
-For a practical example of the 3D printer API, refer to the built-in 
+For a practical example of the 3D Printer API, refer to the built-in 
 [print3d program](https://github.com/SwitchCraftCC/sc-peripherals/blob/HEAD/src/main/resources/data/computercraft/lua/rom/programs/print3d.lua).
 :::
 
@@ -315,3 +373,145 @@ print job.
 | `remaining` | `number` | The number of items remaining in the print job. |
 
 
+## Peripheral API - Wide Format Printer
+
+A Wide Format Printer can be wrapped as a peripheral with the name `poster_printer`, e.g.:
+
+```lua
+local posterPrinter = peripheral.wrap("poster_printer")
+```
+
+The Wide Format Printer has a local buffer of what to print, referred to here as the "poster". A poster has a table of 
+palette colors (63 colors, as index 1 is always transparent) and a table of pixels (16384 entries, 128*128). After
+blitting pixels to the poster with 
+[`posterPrinter.blitPixels(...)`](#posterprinter-blitpixels-x-number-y-number-pixels-table) and setting the palette with
+[`posterPrinter.blitPalette(...)`](#posterprinter-blitpalette-palette-table), the poster can be printed with 
+[`posterPrinter.commit(count)`](#posterprinter-commit-count-number-boolean).
+
+The printer will remember the poster data, so subsequent copies can be printed by committing again, or a new poster can
+be printed by resetting the printer with [`posterPrinter.reset()`](#posterprinter-reset).
+
+::: tip
+For a practical example of the Wide Format Printer API, refer to the built-in
+[poster program](https://github.com/SwitchCraftCC/sc-peripherals/blob/HEAD/src/main/resources/data/computercraft/lua/rom/programs/poster.lua).
+:::
+
+### `posterPrinter.setPixel(x:number, y:number, color:number)`
+
+::: warning
+Using [`posterPrinter.blitPixels`](#posterprinter-blitpixels-x-number-y-number-pixels-table) is preferred as it is
+significantly faster. Each individual `setPixel` call will take at least 1 tick.
+:::
+
+Sets the color of a single pixel in the poster. The color refers to the palette index and must be between 1 and 64 
+(inclusive). The pixel coordinates must be between 1 and 128 (inclusive).
+
+### `posterPrinter.blitPixels(x:number, y:number, pixels:table)`
+
+Sets multiple pixels in the poster. The pixels table must be a one-dimensional table of pixel colors, of maximum size
+16384 (128 * 128). The pixel colors refer to the palette index and must be between 1 and 64 (inclusive).
+
+Pixels will wrap onto the next row (starting at `x` = 1) if the table is larger than the remaining space in the row. 
+This means you can set the entire poster at once by calling `blitPixels(1, 1, pixels)`, where `pixels` is a table of 
+16384 entries.
+
+### `posterPrinter.setPaletteColor(index:number, red:number, green:number, blue:number)`
+
+::: warning
+Using [`posterPrinter.blitPalette`](#posterprinter-blitpalette-palette-table) is preferred as it is significantly
+faster. Each individual `setPaletteColor` call will take at least 1 tick.
+:::
+
+Sets a single color in the poster palette. The palette index must be between 1 and 64 (inclusive). The color components
+must be between 0 and 255 (inclusive). The first entry in the palette (index 1) is always transparent, and cannot be
+changed.
+
+### `posterPrinter.blitPalette(palette:table)`
+
+Sets the palette of the poster. The palette table must be a one-dimensional table of colors, of maximum size 64. The
+first entry in the table is ignored (as index 1 is always transparent). A color is represented as a 24-bit integer,
+where the first 8 bits are the red component, the next 8 bits are the green component, and the last 8 bits are the blue
+component. For example, `0xFF0000` is red, `0x00FF00` is green, and `0x0000FF` is blue.
+
+Example:
+
+```lua
+posterPrinter.blitPalette({
+    0x000000, -- idx 1, Transparent, ignored
+    0xFF0000, -- idx 2, Red
+    0x00FF00, -- idx 3, Green
+    0x0000FF, -- idx 4, Blue
+    -- ... up to 64 entries
+})
+```
+
+### `posterPrinter.commit(count:number): boolean`
+
+Asynchronously begins printing the specified number of posters.
+
+`count` must be greater than 0. Once a job has been committed, the printer will continue trying to print that number of
+items even if it runs out of ink or paper - it will simply wait for more resources to be added. If there is a
+different poster in the printer's output slot, the job will still be committed, but printing will not begin until the
+other item is removed.
+
+### `posterPrinter.getInkLevel(): number, number`
+
+Returns the amount of ink currently in the printer, and the maximum amount of ink the printer can store
+(currently 100000).
+
+### `posterPrinter.getLabel(): string`
+
+Returns the label of this poster item (the name shown on the item). This can be changed with
+[`posterPrinter.setLabel()`](#posterprinter-setlabel-label-string).
+
+### `posterPrinter.getTooltip(): string`
+
+Returns the tooltip (description) of the poster item.
+
+### `posterPrinter.reset()`
+
+Resets the current print buffer to start a new poster. Does not stop any ongoing print jobs.
+
+### `posterPrinter.setLabel([label:string])`
+
+Sets the label (item name) of the poster item.
+
+### `posterPrinter.setTooltip([tooltip:string])`
+
+Sets the tooltip (description) of the poster item.
+
+### `posterPrinter.status(): string, number|boolean`
+
+Returns the status and print progress of the printer.
+
+#### Returned parameters
+| Param      | Type                  | Description                                                                                                                                                                                                                   |
+|------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `status`   | `string`              | <ul><li>`busy` - The printer is currently printing an item.</li><li>`idle` - The printer is not currently printing anything.</li></ul>                                                                                        |
+| `progress` | `number` or `boolean` | If the printer is `busy`, then the progress of the *current item* in ticks, between 0 and 100 (5 seconds).<br />If the printer is `idle`, then `true` if it is ready to print (output slot is not blocked) or `false` if not. |
+
+
+### `posterPrinter.stop()`
+
+Requests the printer to stop the print job after the current item.
+
+### `poster_printer_state` event
+
+The `poster_printer_state` event is emitted whenever a print job starts, stops, or the poster data is changed.
+
+#### Parameters
+
+| Param    | Type     | Description                                                                                                                |
+|----------|----------|----------------------------------------------------------------------------------------------------------------------------|
+| `status` | `string` | The current print status, see [`posterPrinter.status()`](#posterprinter-status-string-number-boolean) for possible values. |
+
+### `poster_printer_complete` event
+
+The `poster_printer_complete` event is emitted when a poster item has been printed, i.e. once for each `count` in a 
+committed print job.
+
+#### Parameters
+
+| Param       | Type     | Description                                     |
+|-------------|----------|-------------------------------------------------|
+| `remaining` | `number` | The number of items remaining in the print job. |
