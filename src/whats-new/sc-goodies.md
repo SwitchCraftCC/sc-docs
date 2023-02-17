@@ -19,20 +19,25 @@ on SwitchCraft 2 such as Iron Chests, EnderStorage, and Quark.
 - [sc-goodies on GitHub](https://github.com/SwitchCraftCC/sc-goodies)
 
 ## Iron Chests
-Several versions of chests and shulker boxes are added to the game.
+Several variants of chests, shulker boxes and barrels are added to the game.
 
 Slots:
 - Iron - 54
 - Gold - 81
 - Diamond - 108
 
-Upgrades between chest versions can be crafted as well:
+Generic upgrades between variants can be crafted as well:
 - Regular -> Iron
 - Iron -> Gold
 - Iron -> Diamond
 - Gold -> Diamond
 
 These chests behave as normal inventories when interacted with by a ComputerCraft Computer.
+
+### Barrel Hammer
+When shift right clicking a chest/barrel with the barrel hammer, it converts the chest/barrel to an opposite of equal variant while keeping all items inside.  
+This tool has 64 of durability can be enchanted as any other tool and can be repaired with an iron ingot.
+
 ## Ender Storage
 Ender Storage allows players to store their items in a special chest that features a changeable color coded frequency. Any chest with the same code will share inventory, enabling item transfer over any distance and even across dimensions. Codes are composed by 3 different color slots and each of them are defined with color dyes by right clicking each slot with one.
 
