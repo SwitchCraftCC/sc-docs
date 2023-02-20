@@ -49,6 +49,7 @@ module.exports = {
         children: [
           ["/whats-new/", "Overview"],
           ["/whats-new/plethora", "Plethora"],
+          ["/whats-new/sc-goodies", "sc-goodies"],
           ["/whats-new/sc-peripherals", "sc-peripherals"],
           ["/whats-new/chunkloaders", "Chunkloaders"],
         ]
