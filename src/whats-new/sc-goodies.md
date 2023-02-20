@@ -6,7 +6,8 @@ title: sc-goodies
 
 [sc-goodies](https://github.com/SwitchCraftCC/sc-goodies) is a Fabric 1.19 content mod for the SwitchCraft server. It
 contains a variety of features specifically designed for SwitchCraft, many of which were inspired by previous 1.12 mods
-on SwitchCraft 2 such as Iron Chests, EnderStorage, and Quark.
+on SwitchCraft 2 such as cpw's [ironchest](https://github.com/cpw/ironchest), ChickenBones' 
+[EnderStorage](https://github.com/TheCBProject/EnderStorage), and Vazkii's [Quark](https://github.com/VazkiiMods/Quark).
 
 ## Table of Contents
 [[toc]]
@@ -18,73 +19,265 @@ on SwitchCraft 2 such as Iron Chests, EnderStorage, and Quark.
 - [sc-goodies on CurseForge](https://www.curseforge.com/minecraft/mc-mods/sc-goodies)
 - [sc-goodies on GitHub](https://github.com/SwitchCraftCC/sc-goodies)
 
-## Iron Chests
-Several variants of chests, shulker boxes and barrels are added to the game.
+## Iron Storage
 
-Slots:
-- Iron - 54
-- Gold - 81
-- Diamond - 108
+Higher-capacity variants of chests, barrels, and shulker boxes are added to the game:
 
-Generic upgrades between variants can be crafted as well:
-- Regular -> Iron
-- Iron -> Gold
-- Iron -> Diamond
-- Gold -> Diamond
+<ul>
+  <li>
+    <img src="/img/sc-goodies/iron_storage.png" alt="Iron Chest, Barrel, and Shulker Box" 
+      title="Iron Chest, Barrel, and Shulker Box" style="height: 32px; vertical-align: bottom" />
+    Iron - 54 slots (9x6)
+  </li>
+  <li>
+    <img src="/img/sc-goodies/gold_storage.png" alt="Gold Chest, Barrel, and Shulker Box" 
+      title="Gold Chest, Barrel, and Shulker Box" style="height: 32px; vertical-align: bottom" />
+    Gold - 81 slots (9x9)
+  </li>
+  <li>
+    <img src="/img/sc-goodies/diamond_storage.png" alt="Diamond Chest, Barrel, and Shulker Box" 
+      title="Diamond Chest, Barrel, and Shulker Box" style="height: 32px; vertical-align: bottom" />
+    Diamond - 108 slots (12x9)
+  </li>
+</ul>
 
-These chests behave as normal inventories when interacted with by a ComputerCraft Computer.
+Upgrades between variants can be crafted as well. For example, an iron chest can be upgraded to a gold chest by crafting
+an Iron to Gold Storage Upgrade, and shift+right-clicking the chest with it. The upgrades work for chests, barrels, and
+shulker boxes.
+
+<ul>
+  <li><ItemImg img="sc-goodies/vanilla_iron_chest_upgrade" name="Vanilla to Iron Storage Upgrade" /></li>
+  <li><ItemImg img="sc-goodies/iron_gold_chest_upgrade" name="Iron to Gold Storage Upgrade" /></li>
+  <li><ItemImg img="sc-goodies/iron_diamond_chest_upgrade" name="Iron to Diamond Storage Upgrade" /></li>
+  <li><ItemImg img="sc-goodies/gold_diamond_chest_upgrade" name="Gold to Diamond Storage Upgrade" /></li>
+</ul>
+
+Iron Chests do not become double chests - they are always single chests. Otherwise, these upgraded storage variants 
+behave identically to their vanilla counterparts. Hoppers and comparators can be used, shulker boxes can be dyed, and
+all can be wrapped as ComputerCraft peripherals.
 
 ### Barrel Hammer
-When shift right clicking a chest/barrel with the barrel hammer, it converts the chest/barrel to an opposite of equal variant while keeping all items inside.  
-This tool has 64 of durability can be enchanted as any other tool and can be repaired with an iron ingot.
+<img src="/img/sc-goodies/barrel_hammer.png" alt="Barrel Hammer" title="Barrel Hammer" 
+  style="float: right; margin-left: 16px" />
+
+Chests can be converted to barrels (and vice-versa) by shift+right-clicking them with a barrel hammer. This makes it
+easy to convert storage types while still keeping all items inside. The Barrel Hammer has a durability of 64 and can be 
+repaired with an iron ingot.
 
 ## Ender Storage
-Ender Storage allows players to store their items in a special chest that features a changeable color coded frequency. Any chest with the same code will share inventory, enabling item transfer over any distance and even across dimensions. Codes are composed by 3 different color slots and each of them are defined with color dyes by right clicking each slot with one.
+<img src="/img/sc-goodies/ender_storage.png" alt="Ender Storage" title="Ender Storage"
+  style="float: right; margin-left: 16px" />
 
-If a player right clicks the chest with a diamond the chest is locked to the player's private "color space".  
+Ender Storage allows players to store their items in a special chest that features a changeable color coded frequency. 
+Any chest with the same frequency will share inventory, enabling item transfer over any distance and even across 
+dimensions. The frequency can be changed by right-clicking the three slots on top of the chest with a dye. As there are
+16 colors, there are 4096 possible frequencies.
 
-If a player right clicks the chest with an emerald the chest becomes accessible by a ComputerCraft Computer through a peripheral API, this nullifies the cost of using a dye.
+### Personal frequencies
 
-If a player shift right clicks the chest with an empty hand the emerald and the diamond can be recovered, this is important as if the chest is broken by the player it retains all of it's configuration. One should be careful with who gets access to private chests and should especially avoid giving out access to privated chests with emeralds
-### Peripheral API
-An Ender Storage Chest can be wrapped as a peripheral with the name "ender_storage", e.g.:
+If a player right-clicks the handle of the Ender Storage with a 
+<img src="/img/diamond.png" alt="Diamond" title="Diamond" style="vertical-align: bottom; margin-right: -4px" /> diamond, 
+it becomes a Personal Ender Storage chest. The contents of this chest are unique to the player who placed the diamond, 
+and only that player can change its frequency. The diamond can be recovered by shift+right-clicking the chest with an 
+empty hand.
+
+For security reasons, the frequency of a Personal Ender Storage chest cannot be changed by ComputerCraft by default. To
+allow this behavior, right-click the handle of the chest with an 
+<img src="/img/emerald.png" alt="Emerald" title="Emerald" style="vertical-align: bottom; margin: 0 -4px" /> emerald. 
+This will enable ComputerCraft to change the frequency of the chest.
+
+::: warning
+If you use an emerald on a Personal Ender Storage chest, **any** player with physical access to the chest will be able
+to access **all** of your private frequencies. Take care with who you give Personal Ender Storage chests to, and who you
+trust in your claims.
+:::
+
+::: tip
+Public (non-personal) Ender Storage chests do not need an emerald to be changed by ComputerCraft. 
+:::
+
+## Peripheral API - Ender Storage
+
+An Ender Storage Chest can be wrapped as a peripheral with the name `ender_storage`, e.g.:
+
 ```lua
-local chest = peripheral.wrap("ender_storage")
+local enderStorage = peripheral.wrap("ender_storage")
 ```
-The following methods are available:
-- ``chest.getFrequency(): Array(left: number, middle: number, right: number)`` (get current frequency)
-- ``chest.getOwner(): String`` (get name of Owner, if any)
-- ``chest.isPersonal(): Boolean`` (check if chest is diamond-locked)
-- ``chest.areComputerChangesEnabled(): Boolean`` (check if chest has emerald)
-- ``chest.setFrequency(left: number, middle: number, right: number)`` (will fail if chest does not have emerald)
+
+### `enderStorage.getFrequency(): number, number, number`
+
+Returns the current frequency of the chest. The numbers returned are equivalent to the ComputerCraft 
+[`colors` API](https://tweaked.cc/module/colors.html).
+
+### `enderStorage.getOwner(): string, string`
+
+If the chest is a Personal Ender Storage chest, returns the UUID of the player who owns the chest, and their last-known
+username. If the chest is not a Personal Ender Storage chest, returns `nil, nil`.
+
+### `enderStorage.isPersonal(): boolean`
+
+Returns `true` if the chest is a Personal Ender Storage chest, `false` otherwise.
+
+### `enderStorage.areComputerChangesEnabled(): boolean`
+
+Returns `true` if the chest allows ComputerCraft to change its frequency, `false` otherwise. This will always be `true`
+for non-personal Ender Storage chests. For Personal Ender Storage chests, this will be `true` if an emerald has been 
+used on the chest's handle.
+
+### `enderStorage.setFrequency(left: number, middle: number, right: number)`
+
+Sets the frequency of the chest. The numbers passed are equivalent to the ComputerCraft 
+[`colors` API](https://tweaked.cc/module/colors.html). For example, to set the frequency to white, white, white:
+
+```lua
+enderStorage.setFrequency(colors.white, colors.white, colors.white)
+```
+
 ## Hover Boots
-Hover boots, when worn (trinkets slot), allow players to jump higher and reduce the falling impact. The boots also allow players to walk up steps of one-block height, making it easier to climb up mountains.
+<img src="/img/sc-goodies/hover_boots.png" alt="Hover Boots" title="Hover Boots"
+  style="float: right; margin-left: 16px" />
 
-They don't need charge nor have durability and can be dyed by the player.
+Hover Boots allow players to jump higher, walk up one-block high walls, and reduce fall damage. They can be equipped in
+the "shoes" Trinket slot.
+
+Hover Boots have no durability, and can be dyed by crafting them with a dye.
+
 ## Item Magnet
-Item Magnet, when worn (trinkets slot), allows players to pick up items from a higher radius according to the magnet's level.  
+<img src="/img/sc-goodies/item_magnet.png" alt="Item Magnet" title="Item Magnet"
+  style="float: right; margin-left: 16px" />
 
-It does require recharging which is equivalent to mending, a higher level magnet does not feature any larger of a charge buffer.
-## Popcorn
-Creative-only food that does not disappear when consumed but also does not fill hunger/saturation.
-## Concrete additions
-Players walking on concrete will benefit of a speed-up, concrete stairs and slabs are also added in all colors.
+The Item Magnet attracts nearby items to the player. It can be equipped in the "gloves" Trinket slot. The Item Magnet
+will disable itself if there is another player nearby with an active Item Magnet. It can also be disabled by pressing
+the Toggle Item Magnet hotkey (<kbd>M</kbd> by default).
+
+### Range
+
+By default, the magnet attracts items within a 3 block radius. This can be upgraded by crafting the Item Magnet with
+a <ItemImg img="nether_star" name="Nether Star" /> Nether Star and 
+a <ItemImg img="netherite_ingot" name="Netherite Ingot" /> Netherite Ingot. Upgrades can be applied multiple times, 
+increasing the range by 1 block each time, up to a maximum of 6 blocks.
+
+## Concrete Slabs and Stairs
+
+Concrete Slabs and Stairs are available in all 16 colors. They are crafted with the same recipe as the vanilla slabs and
+stairs.
+
+Additionally, walking speed on any type of concrete (blocks, slabs, stairs) is 25% faster.
+
 ## Trees
-TODO
-## Grass
-TODO
-## Ported from Quark
-### Renewable Shulkers
-Endermites will rarely bury into Purpur Blocks, much like how Silverfish bury into stone. When they do, they fuse with the block, forming a Shulker.
-### Dragon Scales
-When an Enderdragon that was spawned by the player is killed, it will drop a Dragon Scale.
-The scale can be combined with an Elytra in a crafting table, creating a new one. The old Elytra stays behind untouched, therefore making Elytras renewable.
-### Dyeable Elytra
-The Elytra can be dyed with any of the 16 dyes, as many times as desired.
-Some special variations are available as well: Lesbian, Non-Binary, Pride and Trans.
-### Ancient Tomes
-Can enchant an item one level beyond the maximum vanilla level. Found only in loot chests of mob spawner dungeons
-Existing Tomes:
+
+Three new tree types have been added to the game: Sakura Trees, Maple Trees, and Peppy Trees. They currently do not
+generate naturally but their saplings can be found in loot chests.
+
+<table>
+<thead>
+  <tr>
+    <th>Sakura Tree</th>
+    <th>Maple Tree</th>
+    <th>Peppy Tree</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><img src="/img/sc-goodies/sakura_tree.png" alt="Sakura Tree" title="Sakura Tree" /></td>
+    <td><img src="/img/sc-goodies/maple_tree.png" alt="Maple Tree" title="Maple Tree" /></td>
+    <td><img src="/img/sc-goodies/peppy_tree.png" alt="Peppy Tree" title="Peppy Tree" /></td>
+  </tr>
+</tbody>
+</table>
+
+## Renewable Shulkers
+
+Endermites will rarely bury into Purpur Blocks, similar to how Silverfish bury into stone. When they do, they fuse with 
+the block, forming a Shulker.
+
+## Dragon Scale
+<img src="/img/sc-goodies/dragon_scale.png" alt="Dragon Scale" title="Dragon Scale"
+  style="float: right; margin-left: 16px" />
+
+When an Ender Dragon is killed, it will drop a Dragon Scale. The scale can be combined with an Elytra in a crafting 
+table to create a new Elytra. The old Elytra stays behind untouched, therefore making Elytra cloneable.
+
+## Dyeable Elytra
+<img src="/img/sc-goodies/dyeable_elytra.png" alt="Dyeable Elytra in all 16 colors"
+  title="Dyeable Elytra in all 16 colors" style="float: right; margin-left: 16px" />
+
+The Elytra can be dyed with any of the 16 dyes by crafting it with the dye. The dye will be consumed in the process.
+The original vanilla Elytra can be restored by cleaning it in a cauldron of water.
+
+### Special Elytra
+
+Special dyed variants of the Elytra are also available, and can be crafted with the following recipes:
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Recipe (shapeless)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <ItemImg img="sc-goodies/elytra_lesbian" name="Lesbian Elytra" mid />
+      </td>
+      <td>
+        <ItemImg img="elytra" name="Elytra" mid />
+        <DyeImg color="Red" />
+        <DyeImg color="Orange" />
+        <DyeImg color="White" />
+        <DyeImg color="Pink" />
+        <DyeImg color="Magenta" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ItemImg img="sc-goodies/elytra_non_binary" name="Non-Binary Elytra" mid />
+      </td>
+      <td>
+        <ItemImg img="elytra" name="Elytra" mid />
+        <DyeImg color="Yellow" />
+        <DyeImg color="White" />
+        <DyeImg color="Purple" />
+        <DyeImg color="Black" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ItemImg img="sc-goodies/elytra_pride" name="Pride Elytra" mid />
+      </td>
+      <td>
+        <ItemImg img="elytra" name="Elytra" mid />
+        <DyeImg color="Red" />
+        <DyeImg color="Orange" />
+        <DyeImg color="Yellow" />
+        <DyeImg color="Green" />
+        <DyeImg color="Blue" />
+        <DyeImg color="Purple" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ItemImg img="sc-goodies/elytra_trans" name="Trans Elytra" mid />
+      </td>
+      <td>
+        <ItemImg img="elytra" name="Elytra" mid />
+        <DyeImg color="Light Blue" />
+        <DyeImg color="Pink" />
+        <DyeImg color="White" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Ancient Tomes
+<img src="/img/sc-goodies/ancient_tome.png" alt="Ancient Tome" title="Ancient Tome"
+  style="float: right; margin-left: 16px" />
+
+Ancient Tomes are special enchantment books that can an item one level beyond the maximum vanilla level. They are found
+in loot chests in Dungeons, Stronghold Libraries, Bastion Remnants, and Woodland Mansions.
+
+Ancient Tomes are available for most (but not all) enchantments:
 - Feather Falling (max. V)
 - Swift Sneak (max. IV)
 - Thorns (max. IV)
@@ -106,5 +299,12 @@ Existing Tomes:
 - Riptide (max. IV)
 - Impaling (max. VI)
 - Piercing (max. V)
-### Glass Item Frame
-Crafting an Item Frame with Glass Panes makes a Glass Item Frame. The frame itself will not render while an item is inside, and items inside render a bit larger than a normal Item Frame.
+
+## Glass Item Frame
+<img src="/img/sc-goodies/glass_item_frame.png" alt="Glass Item Frame" title="Glass Item Frame"
+  style="float: right; margin-left: 16px" />
+
+Glass Item Frames are a see-through variant of the vanilla Item Frame. They can be crafted by surrounding an Item Frame
+with Glass Panes. Glow Glass Item Frames can be crafted by combining a Glass Item Frame with a Glow Ink Sac.
+
+Glass Item Frames also have special behavior for banners and shields placed inside them.
