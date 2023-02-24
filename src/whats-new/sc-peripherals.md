@@ -30,10 +30,15 @@ custom posters to display in item frames.
 - [sc-peripherals on CurseForge](https://www.curseforge.com/minecraft/mc-mods/sc-peripherals)
 - [sc-peripherals on GitHub](https://github.com/SwitchCraftCC/sc-peripherals)
 
-#### 3dj converters
+#### 3D Prints
 - [OpenComputers .3dm to .3dj converter](https://3dj.lem.sh) (Official)
 - [Blockbench plugin for exporting to .3dj](https://www.blockbench.net/plugins/sam3dj) (by [Sammy (1Turtle)](https://github.com/1Turtle))
 - [Online Blockbench to .3dj converter](https://3dj.znepb.me) (by [znepb](https://github.com/znepb))
+- [SwitchCraft 3D Prints](https://github.com/SwitchCraftCC/3dprints) - Example 3D prints in the style of BiblioCraft
+
+#### Posters
+- [Reference image to .2dj converter in Python](https://gist.github.com/SwitchCraft3/e6a59dab9a04807f5d035e4e72720524) (Official)
+- [Image to .2dj/.2dja converter](https://poster.madefor.cc/) (by [ShreksHellraiser (MasonGulu)](https://github.com/MasonGulu)) 
 
 ## 3D Printer
 
