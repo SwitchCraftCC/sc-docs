@@ -45,7 +45,7 @@ custom posters to display in item frames.
 <img src="/img/printer.png" alt="3D Printer" title="3D Printer"
   style="float: right; margin-left: 16px" />
 
-The 3D Printer is a [peripheral](#peripheral-api---3d-printerr) that can be used to print 3D models in-game. It takes
+The 3D Printer is a [peripheral](#peripheral-api-3d-printer) that can be used to print 3D models in-game. It takes
 ink cartridges and chamelium to print models, which can be printed with the `print3d` program for files in the `.3dj`
 format.
 
@@ -140,7 +140,7 @@ All arguments except for `shapesOff`, `shapesOn`, `bounds` and `texture` are opt
 <img src="/img/poster_printer.png" alt="Wide Format Printer" title="Wide Format Printer" 
   style="float: right; margin-left: 16px" />
 
-The Wide Format Printer is a [peripheral](#peripheral-api---wide-format-printer) that can print posters, which are 
+The Wide Format Printer is a [peripheral](#peripheral-api-wide-format-printer) that can print posters, which are 
 map-like items that can be displayed in item frames with custom images. A poster is 128x128 pixels and has a 
 customizable 64-color palette (including one transparent color). Like 3D prints, posters can have a custom label and 
 tooltip.
