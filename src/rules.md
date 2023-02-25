@@ -49,7 +49,7 @@ disclosed responsibly to the staff:</h3>
 <Rule rule="4.2">Spamming any other platform that could be considered a chat (or used as a chat), e.g. Discord, chatboxes, chatbox commands, regular commands (to annoy staff) is forbidden.</Rule>
 <Rule rule="4.3">Inviting players to other servers, sharing server links, etc. unless previously allowed by a member of staff is forbidden.</Rule>
 
-<h3 id="r5"><a class="rule-ref" href="#r5">§5</a> Do not harass or troll other players or exhibit hate speech:</h3>
+<h3 id="r5"><a class="rule-ref" href="#r5">§5</a> Do not harass or troll other players, exhibit hate speech, or post explicit content:</h3>
 
 <Rule rule="5.1">Insulting other players in any way, especially if repeated, is bullying and considered harassment.</Rule>
 <Rule rule="5.2">Harassing players extends to both in-chat and in-game.</Rule>
@@ -57,6 +57,14 @@ disclosed responsibly to the staff:</h3>
 <Rule rule="5.4">Coercing players into installing potentially malicious or dangerous software that is publicly disclosed as such is considered trolling.</Rule>
 <Rule rule="5.5">Minor use of profanity is acceptable, but excessive use of profanity is not.</Rule>
 <Rule rule="5.6">Use of hate speech, racial slurs, threats, and any other language that could be considered harmful to a person or a group of people is not allowed. Discussion of such language, when it is clear that it is not being used for the intent of harm, is okay, but should be undertaken with caution.</Rule>
+<Rule rule="5.7">Explicit content of any form, including but not limited to: adult themes, erotic imagery, explicit innuendo, self-harm and suicide, gore, shock content, etc. is not allowed.</Rule>
+<Rule rule="5.7.1" sub>This is a server for a children's game. A large number of players are under the age of 18. Be considerate of other players in all behavior.</Rule>
+<Rule rule="5.7.2" sub>This includes discussion of these topics in in-game chat, on Discord, chatboxes, or in <b>any other public forum</b>.</Rule>
+<Rule rule="5.7.3" sub>This includes in <b>private messages</b> to a player who did not consent to discussing them, or who no longer wishes to discuss them.</Rule>
+<Rule rule="5.7.4" sub>This includes but is not limited to: depictions of explicit content in builds, signs, computers, monitors, posters, map art, speakers, overlay glasses, printouts, banners, links in chat, etc.</Rule>
+<Rule rule="5.7.5" sub>This includes "softcore" adult imagery. Anime art is not automatically considered adult imagery. Where this line is drawn is at the discretion of the staff and cannot be argued.</Rule>
+<Rule rule="5.7.6" sub>Discussing any of the above topics with players who are under the age of 18 is completely disallowed, <i>even in private messages, even if they are contributing to the discussion, and even outside SwitchCraft</i>. <b>Any</b> disrespect to the age of consent will result in a ban.</Rule>
+<Rule rule="5.7.7" sub>Do not allude to any "not safe for work" topics at all, even if you are not discussing them directly, including in innuendo, suggestive jokes, etc.</Rule>
 
 <h3 id="r6"><a class="rule-ref" href="#r6">§6</a> Do not steal or scam items or KST from other players:</h3>
 
