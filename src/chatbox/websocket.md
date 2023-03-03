@@ -58,7 +58,8 @@ joins or leaves. It will contain an array of [user objects](#user-object) as `pl
     "uuid": "07b382be-f2a8-4bf0-b9f5-c3a1b73c18c7",
     "group": "admin",
     "pronouns": "he/they",
-    "world": "minecraft:overworld"
+    "world": "minecraft:overworld",
+    "afk": false
   }]
 }
 ```
@@ -97,7 +98,8 @@ Example of an `event` packet for the [`chat_ingame`](#in-game-chat-event) event:
     "uuid": "07b382be-f2a8-4bf0-b9f5-c3a1b73c18c7",
     "group": "admin",
     "pronouns": "he/they",
-    "world": "minecraft:overworld"
+    "world": "minecraft:overworld",
+    "afk": false
   }
 }
 ```
@@ -148,7 +150,8 @@ Example of an `event` packet for the [`death`](#death-event) event:
     "uuid": "07b382be-f2a8-4bf0-b9f5-c3a1b73c18c7",
     "group": "admin",
     "pronouns": "he/they",
-    "world": "minecraft:overworld"
+    "world": "minecraft:overworld",
+    "afk": false
   },
   "source": { /* ...player object... */ },
 }
@@ -338,7 +341,8 @@ The [event](#event-packet) received when a player posts a message in public chat
     "displayName": "Lemmmy",
     "group": "default",
     "pronouns": "he/they",
-    "world": "minecraft:overworld"
+    "world": "minecraft:overworld",
+    "afk": false
   },
   "time": "2022-07-12T18:54:01+01:00"
 }
@@ -467,7 +471,8 @@ owner-only caret/pipe commands: `^command`) in-game. The `command` capability is
     "displayName": "Lemmmy",
     "group": "default",
     "pronouns": "he/they",
-    "world": "minecraft:overworld"
+    "world": "minecraft:overworld",
+    "afk": false
   },
   "command": "example",
   "args": [
@@ -574,7 +579,8 @@ The [event](#event-packet) received when a player dies in-game.
     "displayName": "Yemmel",
     "group": "default",
     "pronouns": "he/they",
-    "world": "minecraft:overworld"
+    "world": "minecraft:overworld",
+    "afk": false
   },
   "time": "2022-07-12T20:37:00+01:00"
 }
@@ -605,7 +611,8 @@ The [event](#event-packet) received when a player goes AFK in-game.
     "displayName": "Yemmel",
     "group": "default",
     "pronouns": "he/they",
-    "world": "minecraft:overworld"
+    "world": "minecraft:overworld",
+    "afk": true
   },
   "time": "2022-07-12T20:43:37+01:00"
 }
@@ -636,7 +643,8 @@ The [event](#event-packet) received when a player returns from being AFK in-game
     "displayName": "Yemmel",
     "group": "default",
     "pronouns": "he/they",
-    "world": "minecraft:overworld"
+    "world": "minecraft:overworld",
+    "afk": false
   },
   "time": "2022-07-12T20:55:40+01:00"
 }
@@ -734,7 +742,8 @@ Example of a user object:
   "displayName": "Lemmmy", // the name as it appears in chat, may differ from `name`
   "group": "admin",
   "pronouns": "he/they",
-  "world": "minecraft:overworld"
+  "world": "minecraft:overworld",
+  "afk": false
 }
 ```
 
