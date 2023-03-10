@@ -1,5 +1,5 @@
 ---
-title: Plethora 1.19.3
+title: Plethora 1.19.4
 ---
 
 # {{ $frontmatter.title }}
