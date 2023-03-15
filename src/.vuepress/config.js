@@ -79,6 +79,8 @@ module.exports = {
           "/chatbox/changes",
           "/chatbox/computercraft",
           "/chatbox/websocket",
+          ["/chatbox/switchchat", "SwitchChat (JavaScript)"],
+          ["https://docs.sc3.io/library/switchchat/", "SwitchChat API reference"],
         ]
       }
     ]

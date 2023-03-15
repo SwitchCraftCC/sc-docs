@@ -19,6 +19,10 @@ When sending chat messages to the server, you can specify an integer `id` proper
 Then, when the message has been successfully sent, you will receive a [`success`](#success-packet) packet with the same
 `id`.
 
+## JavaScript/TypeScript API
+
+AlexDevs has written a [JavaScript/TypeScript package](/chatbox/switchchat) to integrate with the Chatbox API.
+
 ## Rate limits
 
 Messages can be sent at most once per 0.5 seconds per license, with up to 5 messages queued at once. Any more than that,
