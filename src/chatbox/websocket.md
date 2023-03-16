@@ -733,8 +733,8 @@ The `world` may be the world the player is in, or `null` if this information is 
 namespaced registry key, for example:
 
 * `minecraft:overworld` - The overworld
-* `minecraft:the_nether` - The nether
-* `minecraft:the_end` - The end
+* `minecraft:the_nether` - The Nether
+* `minecraft:the_end` - The End
 
 Example of a user object:
 
