@@ -271,13 +271,13 @@ You can run these methods on your [`Client`](https://docs.sc3.io/library/switchc
 
 Sends a message to the in-game public chat. Returns a Promise that resolves to a
 [Success](https://docs.sc3.io/library/switchchat/interfaces/Success.html) object, which will tell you if the message
-was sent (`reason` is `"message_sent"`) or queued (`reason` is `"message_queued"`).
+was sent (`reason` is `"message_sent"`).
 
-| Argument | Type                | Description                                                                                                                              |
-|----------|---------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| `text`   | `string`            | The message to send.                                                                                                                     |
-| `name`   | `string` (optional) | The name of the chatbox to show. If no name is specified, it will default to the username of the license owner, or `client.defaultName`. |
-| `mode`   | `Mode` (optional)   | The formatting mode to use (`"markdown"` or `"format"`). Defaults to `client.defaultFormattingMode` or `"markdown"`.                     |
+| Argument | Type                        | Description                                                                                                                              |
+|----------|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| `text`   | `string`                    | The message to send.                                                                                                                     |
+| `name`   | `string` (optional)         | The name of the chatbox to show. If no name is specified, it will default to the username of the license owner, or `client.defaultName`. |
+| `mode`   | `FormattingMode` (optional) | The formatting mode to use (`"markdown"` or `"format"`). Defaults to `client.defaultFormattingMode` or `"markdown"`.                     |
 
 ### client.tell
 
@@ -289,14 +289,14 @@ was sent (`reason` is `"message_sent"`) or queued (`reason` is `"message_queued"
 
 Sends a private message to an in-game player. Returns a Promise that resolves to a
 [Success](https://docs.sc3.io/library/switchchat/interfaces/Success.html) object, which will tell you if the message
-was sent (`reason` is `"message_sent"`) or queued (`reason` is `"message_queued"`).
+was sent (`reason` is `"message_sent"`).
 
-| Argument | Type                | Description                                                                                                                              |
-|----------|---------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| `user`   | `string`            | The username or UUID of the user to send the message to.                                                                                 |
-| `text`   | `string`            | The message to send.                                                                                                                     |
-| `name`   | `string` (optional) | The name of the chatbox to show. If no name is specified, it will default to the username of the license owner, or `client.defaultName`. |
-| `mode`   | `Mode` (optional)   | The formatting mode to use (`"markdown"` or `"format"`). Defaults to `client.defaultFormattingMode` or `"markdown"`.                     |
+| Argument | Type                        | Description                                                                                                                              |
+|----------|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| `user`   | `string`                    | The username or UUID of the user to send the message to.                                                                                 |
+| `text`   | `string`                    | The message to send.                                                                                                                     |
+| `name`   | `string` (optional)         | The name of the chatbox to show. If no name is specified, it will default to the username of the license owner, or `client.defaultName`. |
+| `mode`   | `FormattingMode` (optional) | The formatting mode to use (`"markdown"` or `"format"`). Defaults to `client.defaultFormattingMode` or `"markdown"`.                     |
 
 
 ### client.connect
@@ -368,7 +368,7 @@ The Discord user object represents a user on Discord.
 
 Minecraft's serialised [raw JSON text format](https://minecraft.fandom.com/wiki/Raw_JSON_text_format). See the [SwitchCraft documentation](https://docs.sc3.io/chatbox/websocket.html#raw-json-text-object) for more information on how this is used.
 
-### Mode
+### FormattingMode
 
 ([API reference](https://docs.sc3.io/library/switchchat/types/FormattingMode.html))
 
