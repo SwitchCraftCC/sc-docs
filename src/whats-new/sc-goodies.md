@@ -157,12 +157,19 @@ a <ItemImg img="nether_star" name="Nether Star" /> Nether Star and
 a <ItemImg img="netherite_ingot" name="Netherite Ingot" /> Netherite Ingot. Upgrades can be applied multiple times, 
 increasing the range by 1 block each time, up to a maximum of 6 blocks.
 
-## Concrete Slabs and Stairs
+## Concrete and Slabs and Stairs
 
 Concrete Slabs and Stairs are available in all 16 colors. They are crafted with the same recipe as the vanilla slabs and
 stairs.
 
 Additionally, walking speed on any type of concrete (blocks, slabs, stairs) is 25% faster.
+
+## More Slabs and Stairs
+<img src="/img/sc-goodies/amethyst_blocks.png" alt="Amethyst Slabs and Stairs" title="Amethyst Slabs and Stairs"
+  style="float: right; margin-left: 16px" />
+
+Amethyst Slabs and Stairs are also available. They are crafted with the same recipe as the vanilla slabs and
+stairs.
 
 ## Trees
 
