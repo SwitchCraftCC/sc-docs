@@ -63,7 +63,10 @@ joins or leaves. It will contain an array of [user objects](#user-object) as `pl
     "group": "admin",
     "pronouns": "he/they",
     "world": "minecraft:overworld",
-    "afk": false
+    "afk": false,
+    "alt": false,
+    "bot": false,
+    "supporter": 0
   }]
 }
 ```
@@ -103,7 +106,10 @@ Example of an `event` packet for the [`chat_ingame`](#in-game-chat-event) event:
     "group": "admin",
     "pronouns": "he/they",
     "world": "minecraft:overworld",
-    "afk": false
+    "afk": false,
+    "alt": false,
+    "bot": false,
+    "supporter": 0
   }
 }
 ```
@@ -155,7 +161,10 @@ Example of an `event` packet for the [`death`](#death-event) event:
     "group": "admin",
     "pronouns": "he/they",
     "world": "minecraft:overworld",
-    "afk": false
+    "afk": false,
+    "alt": false,
+    "bot": false,
+    "supporter": 0
   },
   "source": { /* ...player object... */ },
 }
@@ -346,7 +355,10 @@ The [event](#event-packet) received when a player posts a message in public chat
     "group": "default",
     "pronouns": "he/they",
     "world": "minecraft:overworld",
-    "afk": false
+    "afk": false,
+    "alt": false,
+    "bot": false,
+    "supporter": 0
   },
   "time": "2022-07-12T18:54:01+01:00"
 }
@@ -476,7 +488,10 @@ owner-only caret/pipe commands: `^command`) in-game. The `command` capability is
     "group": "default",
     "pronouns": "he/they",
     "world": "minecraft:overworld",
-    "afk": false
+    "afk": false,
+    "alt": false,
+    "bot": false,
+    "supporter": 0
   },
   "command": "example",
   "args": [
@@ -584,7 +599,10 @@ The [event](#event-packet) received when a player dies in-game.
     "group": "default",
     "pronouns": "he/they",
     "world": "minecraft:overworld",
-    "afk": false
+    "afk": false,
+    "alt": false,
+    "bot": false,
+    "supporter": 0
   },
   "time": "2022-07-12T20:37:00+01:00"
 }
@@ -648,7 +666,10 @@ The [event](#event-packet) received when a player returns from being AFK in-game
     "group": "default",
     "pronouns": "he/they",
     "world": "minecraft:overworld",
-    "afk": false
+    "afk": false,
+    "alt": false,
+    "bot": false,
+    "supporter": 0
   },
   "time": "2022-07-12T20:55:40+01:00"
 }
@@ -736,6 +757,10 @@ namespaced registry key, for example:
 * `minecraft:the_nether` - The Nether
 * `minecraft:the_end` - The End
 
+The `supporter` field is the current public tier of the player's supporter status. This will be `0` if the player is not
+a supporter or has opted out of showing their supporter tag, `1` for a Tier 1 supporter, `2` for a Tier 2 supporter, and
+`3` for a Tier 3 supporter.
+
 Example of a user object:
 
 ```json5
@@ -747,7 +772,10 @@ Example of a user object:
   "group": "admin",
   "pronouns": "he/they",
   "world": "minecraft:overworld",
-  "afk": false
+  "afk": false,
+  "alt": false,
+  "bot": false,
+  "supporter": 0
 }
 ```
 
