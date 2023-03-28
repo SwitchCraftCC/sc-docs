@@ -41,7 +41,7 @@ disclosed responsibly to the staff:</h3>
 <Rule rule="3.4.1" sub>Using legitimate vanilla mechanics, ComputerCraft or Plethora to automate gameplay is allowed.</Rule>
 <Rule rule="3.4.2" sub>No other automated activity is allowed, including Mineflayer bots, macro mods, macro/automation software, macro hardware, and any other tools or methods that may be used to automate Minecraft gameplay. This includes but is not limited to: chat-bots, auto-clickers, auto-fishers, auto-miners, and pathfinders.</Rule>
 <Rule rule="3.5">Using the world seed to predict generation is forbidden.</Rule>
-<Rule rule="3.6">Any bug found that has any potential to be exploited by other players, e.g. duplication bugs, spam bugs, claim bypass bugs, should be <b>silently</b> and <b>responsibly</b> disclosed <b>to a member of staff</b> and NOT shown/told to ANY other players while they are unpatched. Irresponsible disclosure of exploits may lead to an immediate mute or ban.</Rule>
+<Rule rule="3.6">Any bug found that has any potential to be exploited by other players, e.g. duplication bugs, spam bugs, claim bypass bugs, should be <b>silently</b> and <b>responsibly</b> disclosed <a href="https://github.com/SwitchCraftCC/issues#reporting-exploits" target="_blank"><b>to a member of staff</b></a> and NOT shown/told to ANY other players while they are unpatched. Irresponsible disclosure of exploits may lead to an immediate mute or ban.<br /><br />If you do find an exploit, you may be eligible for <a href="https://github.com/SwitchCraftCC/issues#reporting-exploits" target="_blank">at least <KristValue value="500" /> bug bounty reward</a>.</Rule>
 
 <h3 id="r4"><a class="rule-ref" href="#r4">§4</a> Do not spam the chat or advertise:</h3>
 
