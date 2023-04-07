@@ -4,7 +4,6 @@ title: SwitchCraft Rules
 
 # {{ $frontmatter.title }}
 
-<Badge text="Last updated: January 17th, 2023" type="tip" />
 Above all the rules, please use common sense, and be nice to other people.
 
 <div class="rules-list">
