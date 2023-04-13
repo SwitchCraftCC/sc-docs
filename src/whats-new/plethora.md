@@ -27,7 +27,6 @@ are a few minor API changes (mainly to ensure consistency with modern CC: Tweake
 
 ## Not yet implemented
 
-- Neural interfaces on mobs
 - Computers in minecarts
 - Documentation exporter
 
@@ -47,6 +46,7 @@ are a few minor API changes (mainly to ensure consistency with modern CC: Tweake
 - Keyboards can no longer be 'bound' to computers. Instead, computers can be right-clicked from up to 32 blocks away
   (shift-right-click if they are within the normal reach range) to open the keyboard GUI. They still work the same as
   a neural interface module, forwarding all key events while in-game.
+- Neural interfaces no longer work on mobs.
 - The following vanilla modules have been removed:
   - Note Blocks - use CC: Tweaked's Speakers instead
   - Clock - use `os.clock()` and `os.day()` instead
