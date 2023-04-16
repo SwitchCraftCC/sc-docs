@@ -15,7 +15,7 @@ custom posters to display in item frames.
 
 - `.3dj` models are printed in-game by running `print3d <filename.3dj>` on a computer with a 3D Printer peripheral.
   Legacy OC 3D models can be converted using the [.3dm to .3dj converter](https://3dj.lem.sh).
-- `.2dj` images are printed in-game by running `poster <filename.2dj>` on a computer with a Wide Format Printer 
+- `.2dj`/`.2dja` images are printed in-game by running `poster <filename.2dj(a)>` on a computer with a Wide Format Printer
   peripheral.
 
 ![sc-peripherals](/img/sc-peripherals.png)
@@ -170,6 +170,23 @@ posters use the same palette as [vanilla maps](https://minecraft.fandom.com/wiki
 2 is <ColorName color="rgb(247, 233, 163)">SAND</ColorName>, etc.
 
 [Example .2dj file](https://p.sc3.io/umAmBHM3p2)
+
+### .2dja format
+
+A 2dja file is primarily a collection of 2dj files, encoded with the following structure:
+
+```json5
+{
+  "title": "...", // (optional) The name of the collection of posters, not currently used
+  "width": 1,     // (optional) Count of posters in a row, not currently used
+  "height": 3,    // (optional) Count of posters in a column, not currently used
+  "pages": [      // Array of 2dj files, length should be width * height if specified
+    { /* ... */ },
+    { /* ... */ },
+    { /* ... */ }
+  ]
+}
+```
 
 ## Peripheral API - 3D Printer
 
