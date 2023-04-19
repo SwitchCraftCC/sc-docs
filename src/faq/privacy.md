@@ -39,8 +39,9 @@ through CraftingStore. You will be subjected to their respective Privacy Policie
 policy can be found here: <https://craftingstore.net/legal/privacy>. The only Personal Information we collect from you
 through CraftingStore is your username.
 
-Personal Information We Collect Automatically When You Use the Sites or the Servers When you access the Sites or
-Servers, we automatically collect certain Personal Information about you. This information includes:
+#### Personal Information We Collect Automatically When You Use the Sites or the Servers 
+When you access the Sites or Servers, we automatically collect certain Personal Information about you. This information 
+includes:
 
 - **Log Information**: We log information from your use of the Sites and the Servers, including your device information,
   access times and IP address. We use this information for analytics and security monitoring purposes.
