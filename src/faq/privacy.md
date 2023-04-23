@@ -6,12 +6,12 @@ title: Privacy Policy
 
 [[toc]]
 
-**Effective December 28, 2022.**
+**Effective April 23, 2023.**
 
-This privacy policy (the “**Privacy Policy**”) describes how SwitchCraft 3 (“**SwitchCraft**,” “**SC3**,” “**we**,” or
-“**us**”) collects, uses and discloses personal information (“**Personal Information**”) about you when you visit any of
-the websites owned or operated by SwitchCraft (collectively, the “**Sites**”), connect to any of our Minecraft servers
-(collectively, the “**Servers**”), or when you otherwise interact with us.
+This privacy policy (the “**Privacy Policy**”) describes how Tmpim LLC, operating as SwitchCraft 3 (“**SwitchCraft**,”
+“**SC3**,” “**we**,” or “**us**”) collects, uses and discloses personal information (“**Personal Information**”) about
+you when you visit any of the websites owned or operated by SwitchCraft (collectively, the “**Sites**”), connect to any
+of our Minecraft servers (collectively, the “**Servers**”), or when you otherwise interact with us.
 
 Other websites and providers may follow different rules regarding the use or disclosure of the information you submit to
 them, such as third-party mods included installed on your client or provided by us in our modpack, or the platform you
