@@ -6,7 +6,7 @@ title: Privacy Policy
 
 [[toc]]
 
-**Effective April 23, 2023.**
+**Effective May 06, 2023.**
 
 This privacy policy (the “**Privacy Policy**”) describes how Tmpim LLC, operating as SwitchCraft 3 (“**SwitchCraft**,”
 “**SC3**,” “**we**,” or “**us**”) collects, uses and discloses personal information (“**Personal Information**”) about
