@@ -345,7 +345,7 @@ The user object represents an in-game player.
 - name - The Minecraft username of the player.
 - uuid - The Minecraft UUID of the player, with hyphens.
 - displayName - The user's name as it appears in chat. May differ from `name`.
-- group - The rank of the player, usually `"default"`, `"moderator"` or `"admin"`.
+- group - The rank of the player, usually `"default"` or `"admin"`.
 - pronouns - The [pronouns](https://docs.sc3.io/faq/pronouns.html) set by the user by running `/pronouns`. This may be
   `null` if the player has not set any preferred pronouns. Where reasonably possible, you should attempt to use the
   user's preferred pronouns, or avoid using pronouns entirely. If you are unable to do this, you should use the player's

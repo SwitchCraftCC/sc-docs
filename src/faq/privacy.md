@@ -35,9 +35,12 @@ We collect Personal Information you provide us, for example when you reach out t
 such as your username.
 
 You may also provide Personal Information to third parties when you use our Sites or Servers, such as when donating
-through CraftingStore. You will be subjected to their respective Privacy Policies in such cases. CraftingStore’s privacy
-policy can be found here: <https://craftingstore.net/legal/privacy>. The only Personal Information we collect from you
-through CraftingStore is your username.
+through Stripe or PayPal. You will be subjected to their respective Privacy Policies in such cases:
+
+- Stripe’s privacy policy can be found here: <https://stripe.com/privacy>. The only Personal Information we collect from
+  you through Stripe is your email address.
+- PayPal’s privacy policy can be found here: <https://www.paypal.com/legalhub/privacy-full>. The only Personal 
+  Information we collect from you through PayPal is your email address.
 
 #### Personal Information We Collect Automatically When You Use the Sites or the Servers 
 When you access the Sites or Servers, we automatically collect certain Personal Information about you. This information 
@@ -50,8 +53,9 @@ includes:
   Minecraft client, and anonymized installation paths. We use this information for analytics and security monitoring
   purposes.
 - **Interaction Information**: We collect information about how you interact with the Sites and the Servers, such as
-  actions performed on the Minecraft servers, and messages sent within Minecraft and Discord. We use this information
-  for analytics, customer support, product improvement, and security monitoring purposes.
+  actions performed on the Minecraft servers, messages sent within Minecraft and Discord, and Supporter donations made
+  on [sc3.io](https://sc3.io). We use this information for analytics, customer support, product improvement, and 
+  security monitoring purposes.
 
 Third parties which we rely upon to provide our Sites and Servers may also automatically collect Personal Information,
 such as Cloudflare for our Sites whose Privacy Policy is available here: <https://www.cloudflare.com/privacypolicy/>
@@ -59,8 +63,15 @@ And our infrastructure providers may collect IP addresses for security monitorin
 
 ### Information Collected by Cookies and Other Tracking Technologies
 We don’t collect information from your web browser using persistent tracking technologies such as cookies or similar.
-However, we use third-party services such as Cloudflare which do and are described in its respective Privacy Policy
-<https://www.cloudflare.com/privacypolicy/>. We only use Cloudflare for analytics and security monitoring purposes.
+However, we use third-party services such as Cloudflare, Stripe and PayPal which do and are described in their 
+respective Privacy Policies:
+
+- Cloudflare’s privacy policy can be found here: <https://www.cloudflare.com/privacypolicy/>. We use Cloudflare for 
+  analytics and security monitoring purposes.
+- Stripe’s privacy policy can be found here: <https://stripe.com/privacy>. We use Stripe for processing donations made
+  on [sc3.io](https://sc3.io).
+- PayPal’s privacy policy can be found here: <https://www.paypal.com/legalhub/privacy-full>. We use PayPal for 
+  processing donations made on [sc3.io](https://sc3.io).
 
 ### How We Use Your Personal Information
 We only use your Personal Information for legitimate business purposes. We may use your Personal Information to:

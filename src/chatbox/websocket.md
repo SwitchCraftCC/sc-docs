@@ -743,8 +743,7 @@ The user object represents an in-game player.
 The `group` is the rank of the player. Valid groups are:
 
 * `default` - The default player group
-* `moderator` - Moderators of the server
-* `admin` - Administrators of the server
+* `admin` - Staff of the server
 
 The `pronouns` string is the [pronouns](/faq/pronouns) set by the user by running `/pronouns`. This may be `null` if the
 player has not set any preferred pronouns. Where reasonably possible, you should attempt to use the user's preferred

@@ -13,15 +13,22 @@ Donations go directly to server upkeep and maintenance costs, helping SwitchCraf
 
 By becoming a <span color="#55FFFF">Supporter</span>, you will receive multiple tags:
 - <SupporterTag :tier=1 /> next to your name in-game
-- <span style="color: #55FFFF">Supporter</span> role in [Discord](https://discord.sc3.io)
-- <span style="color: #55FFFF">Supporter</span> role on the [ComputerCraft:Tweaked Forums](https://forums.computercraft.cc)
+- <SupporterTag :tier=1 svg /> <span style="color: #55FFFF">Supporter</span> role on our
+  [Discord](https://discord.sc3.io)
+- <span style="color: #55FFFF">Supporter</span> role on the 
+  [ComputerCraft:Tweaked Forums](https://forums.computercraft.cc)
 
-You will also receive the following cosmetic perks:
+You will also receive the following cosmetic perks in-game:
 - The `/hat` command, which allows you to wear any block in your head slot
 
-Tags will last **30 days** for every **$5 USD** contributed. The minimum donation is **$5.00 USD**. For example, if you 
-donate **$20.00 USD**, you will receive <SupporterTag :tier=1 /> for **120 days**. You may purchase supporter multiple
-times, and it will stack.
+And the following additional perks on our [Discord](https://discord.sc3.io):
+- Access to the exclusive `#supporters` chat channel
+- Ability to change your own nickname
+- Ability to use external emoji and stickers
+
+Tags will last **30 days** for every **$5.00 USD** contributed. The minimum donation is **$5.00 USD**. For example, if 
+you donate **$20.00 USD**, you will receive <SupporterTag :tier=1 /> for **120 days**. You may purchase supporter 
+multiple times, and it will stack.
 
 Tags are usually applied within 30 minutes of purchase. Contact staff on [Discord](https://discord.sc3.io) for support.
 
