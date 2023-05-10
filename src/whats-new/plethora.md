@@ -88,6 +88,17 @@ For the player inventory *only* (`getInventory()` with an introspection module):
 - Player meta fields <NYI/>: `isFlying`, `allowFlying`, `walkSpeed`, `flySpeed`
 - Block meta fields <NYI/>: `harvestLevel`, `harvestTool`, `metadata`
 - Enchantment names are slightly different (e.g. `enchantment.oxygen` -> `minecraft:respiration`)
+- Entity 'motion' and 'velocity' have been split up into two separate fields. They are:
+  - `motionX`, `motionY`, `motionZ` - the entity's server-side velocity. For players, this only includes motion that
+    was initiated by the server (e.g. kinetic launch, elytra flying, etc.). Since the player's position is always
+    updated by the client, this means that it may not be a fully accurate representation of the change in the player's
+    position.
+  - `deltaPosX`, `deltaPosY`, `deltaPosZ` - the entity's client-side velocity. This is derived from the entity's
+    position on the server at the end of the tick. For players, this includes all motion, including motion initiated by
+    the client (e.g. walking, sprinting, knockback, etc.). However, since the player's position is always updated by the
+    client, some components of the velocity may be delayed according to the client's latency, which will always be at 
+    least 1 tick.
+  - For non-player entities, these values should be identical, but the 'deltaPos' fields may be delayed by a tick.
 
 #### Overlay glasses
 
