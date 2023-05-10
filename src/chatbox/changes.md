@@ -21,6 +21,7 @@ more consistent. All events have been moved to the `event` packet.
   - `chat_discord`
   - `chat_chatbox`
   - `command`
+  - `world_change`
 - The `chat_me` event has been removed.
 - The `afkReturn` event has been renamed to `afk_return`.
   - **New:** Owner-only chatbox commands are now available. Prefix a command with a caret (`^`, e.g. `^command`) or a 

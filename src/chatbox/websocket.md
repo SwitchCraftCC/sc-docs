@@ -312,6 +312,7 @@ Supported events:
 * [`leave`](#leave-event) - A player left the server. Will contain the `user` property.
 * [`death`](#death-event) - A player died. Will contain the `user`, `text` and `renderedText` properties, and may also 
   contain the `source` property, if one exists.
+* [`world_change`](#world-change-event) - A player changed worlds. Will contain the `user` property.
 * [`afk`](#afk-event) - A player went AFK (`/afk`). Will contain the `user` property.
 * [`afk_return`](#afk-return-event) - A player returned from being AFK (`/afk`). Will contain the `user` property.
 * [`server_restart_scheduled`](#server-restart-scheduled-event) - The server will restart soon. 
@@ -605,6 +606,40 @@ The [event](#event-packet) received when a player dies in-game.
     "supporter": 0
   },
   "time": "2022-07-12T20:37:00+01:00"
+}
+```
+:::
+
+### World change event
+
+The [event](#event-packet) received when a player changes worlds.
+
+| Name          | Type                        | Argument Description                                          |
+|---------------|-----------------------------|---------------------------------------------------------------|
+| `event`       | string                      | `"world_change"`                                              |
+| `user`        | [User object](#user-object) | The in-game player who changed worlds.                        |
+| `origin`      | string                      | The identifier string of the world the player has moved from. |
+| `destination` | string                      | The identifier string of the world the player is now in.      |
+
+::: details Example payload of the `world_change` event
+```json5
+{
+  "ok": true,
+  "type": "event",
+  "id": -1,
+  "event": "world_change",
+  "user": {
+    "type": "ingame",
+    "name": "Yemmel",
+    "uuid": "07b382be-f2a8-4bf0-b9f5-c3a1b73c18c7",
+    "displayName": "Yemmel",
+    "group": "default",
+    "pronouns": "he/they",
+    "world": "minecraft:the_nether",
+    "afk": true
+  },
+  "origin": "minecraft:overworld",
+  "destination": "minecraft:the_nether"
 }
 ```
 :::

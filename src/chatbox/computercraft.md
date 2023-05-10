@@ -136,6 +136,18 @@ The event received when a player dies in-game.
 | `text`   | The text of the death message                                                |
 | `data`   | Table containing the full [Event packet](websocket.md#death-event)           |
 
+### World change event
+
+The event received when a player changes worlds.
+
+| Name           | Argument Description                                                      |
+|----------------|---------------------------------------------------------------------------|
+| `event`        | `"world_change"`                                                          |
+| `user`         | The username of the user that changed worlds.                             |
+| `origin`       | The identifier string of the world the user has moved from.               |
+| `destination`  | The identifier string of the world the user is now in.                    |
+| `data`         | Table containing the full [Event packet](websocket.md#world-change-event) |
+
 ### AFK event
 
 The event received when a player goes AFK in-game.
