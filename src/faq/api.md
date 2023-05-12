@@ -49,14 +49,14 @@ Returns the top 50 most active players on the server, excluding players who have
 } 
 ```
 
-## `/v3/donation`
+## `/v3/supporter`
 
-Returns the current donation goal.
+Returns the current Supporter goal.
 
 ```json5
 {
-  "donationUrl": "https://donate.sc3.io", // The URL to the donation page
-  "current": "5.00", // The current amount donated
+  "supporterUrl": "https://sc3.io/supporter", // The URL to the Supporter page
+  "current": "5.00", // The current amount contributed this month
   "goal": "10.00",   // The goal amount
   "goalMet": false   // Whether the goal has been met
 } 

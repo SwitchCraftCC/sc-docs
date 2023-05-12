@@ -75,7 +75,7 @@ Here is a high level overview of what to expect in SwitchCraft 3:
   - You can also now opt out of showing your supporter tag publicly by running `/supporter opt out`
   - Supporters now have access to the `/hat` command
 - Staff icons in chat ![Staff Icon 1](/img/staff-icon-1.png) ![Staff Icon 2](/img/staff-icon-2.png)
-- Monthly donation goal in the tablist
+- Monthly Supporter goal in the tablist
 - [Krist-based chunkloaders](/whats-new/chunkloaders)
   - Pay once to unlock chunkloading limits
   - Keep chunks loaded only when you are online
@@ -124,7 +124,7 @@ Here is a high level overview of what to expect in SwitchCraft 3:
   - `/v3/players` - Number of players online and active
   - `/v3/tps` - Current TPS and milliseconds per tick
   - `/v3/activetime` - Top 50 most active players
-  - `/v3/donation` - Current donation goal and progress
+  - `/v3/supporter` - Current Supporter goal and progress
   - `/v3/deaths` - Top 50 players by death count
 - [`/sc2dump`](/faq/sc2-dump) - Get an **archive of your SwitchCraft 2 computers and homes**
 - Signs can be edited by right-clicking with an empty hand

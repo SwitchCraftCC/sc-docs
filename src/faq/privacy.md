@@ -34,7 +34,7 @@ Information, please contact us at <privacy@sc3.io>.
 We collect Personal Information you provide us, for example when you reach out to us and provide identifying information
 such as your username.
 
-You may also provide Personal Information to third parties when you use our Sites or Servers, such as when donating
+You may also provide Personal Information to third parties when you use our Sites or Servers, such as when purchasing
 through Stripe or PayPal. You will be subjected to their respective Privacy Policies in such cases:
 
 - Stripe’s privacy policy can be found here: <https://stripe.com/privacy>. The only Personal Information we collect from
@@ -53,7 +53,7 @@ includes:
   Minecraft client, and anonymized installation paths. We use this information for analytics and security monitoring
   purposes.
 - **Interaction Information**: We collect information about how you interact with the Sites and the Servers, such as
-  actions performed on the Minecraft servers, messages sent within Minecraft and Discord, and Supporter donations made
+  actions performed on the Minecraft servers, messages sent within Minecraft and Discord, and Supporter purchases made
   on [sc3.io](https://sc3.io). We use this information for analytics, customer support, product improvement, and 
   security monitoring purposes.
 
@@ -68,10 +68,10 @@ respective Privacy Policies:
 
 - Cloudflare’s privacy policy can be found here: <https://www.cloudflare.com/privacypolicy/>. We use Cloudflare for 
   analytics and security monitoring purposes.
-- Stripe’s privacy policy can be found here: <https://stripe.com/privacy>. We use Stripe for processing donations made
+- Stripe’s privacy policy can be found here: <https://stripe.com/privacy>. We use Stripe for processing purchases made
   on [sc3.io](https://sc3.io).
 - PayPal’s privacy policy can be found here: <https://www.paypal.com/legalhub/privacy-full>. We use PayPal for 
-  processing donations made on [sc3.io](https://sc3.io).
+  processing purchases made on [sc3.io](https://sc3.io).
 
 ### How We Use Your Personal Information
 We only use your Personal Information for legitimate business purposes. We may use your Personal Information to:
