@@ -83,3 +83,22 @@ Returns the top 50 players with the most deaths in descending order.
   }
 ]
 ```
+
+## `/v3/proxies`
+
+HTTP and Websocket requests from within ComputerCraft are proxied through a number of HTTP proxies. This endpoint 
+returns a list of IP ranges (in 
+[CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation)) that HTTP requests may
+originate from. If your webserver validates the IP address of incoming requests, you should refer to this list as it may
+change at any time. We will aim to post information about changes to this list in the #changelog channel on Discord.
+
+For an IPv4 address, a CIDR range of `/32` means that the IP address will be exactly that address.
+
+```json5
+{
+  "httpProxies": [
+    "1.2.3.4/32",
+    "5.6.7.8/32"
+  ]
+}
+```
