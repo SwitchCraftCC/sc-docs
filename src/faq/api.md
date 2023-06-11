@@ -102,3 +102,24 @@ For an IPv4 address, a CIDR range of `/32` means that the IP address will be exa
   ]
 }
 ```
+
+## `/v3/uptime`
+
+Returns information about how long the server has been up for, and when it will next restart. The `pendingRestart` field
+is available when a restart countdown begins, for either a manual or automatic restart. It may be `null` if no restart
+countdown has begun, or a restart has been cancelled. The `nextRestart` field is the time of the next **scheduled**
+restart. The server may restart before this time.
+
+```json5
+{
+  "startTime": "2023-06-11T22:33:15.998Z", // The time the server's JVM started
+  "uptimeMs": 182551, // The uptime of the server's JVM in milliseconds
+  "pendingRestart": {
+    "type": "manual",
+    "specifiedSeconds": 300, // The number of seconds the restart countdown was specified for (e.g. 10 minutes)
+    "seconds": 247, // The number of seconds until the restart will occur
+    "at": "2023-06-11T22:40:26.266558600Z" // The time the restart will occur
+  },
+  "nextRestart": "2023-06-12T00:00+01:00[Europe/London]"
+}
+```
