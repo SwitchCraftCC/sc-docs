@@ -1,5 +1,5 @@
 ---
-title: Plethora 1.19.4
+title: Plethora 1.20.1
 ---
 
 # {{ $frontmatter.title }}
@@ -7,7 +7,7 @@ title: Plethora 1.19.4
 [View Plethora-Fabric on GitHub](https://github.com/SwitchCraftCC/Plethora-Fabric)
 
 Plethora-Fabric is a port of [Plethora](https://github.com/SquidDev-CC/plethora) for [Fabric](https://fabricmc.net/) 
-1.19+ and [CC: Tweaked](https://github.com/cc-tweaked/cc-tweaked). Most features have been ported over 1:1. There
+1.20+ and [CC: Tweaked](https://github.com/cc-tweaked/cc-tweaked). Most features have been ported over 1:1. There
 are a few minor API changes (mainly to ensure consistency with modern CC: Tweaked).
 
 [[toc]]
