@@ -8,7 +8,7 @@ title: What's New in SwitchCraft 3
 
 <div class="whats-new-listing spread-lists">
 
-SwitchCraft 3 has been rebuilt from the ground up for Minecraft 1.19.4 with the Fabric mod loader. Every custom mod and
+SwitchCraft 3 has been rebuilt from the ground up for Minecraft 1.20.1 with the Fabric mod loader. Every custom mod and
 plugin has been rewritten, and most other plugins have also been rewritten from scratch, to reduce the dependency on
 third party code. This gives us much better control over the game and allows us to make changes and bugfixes much more 
 quickly.
@@ -16,15 +16,15 @@ quickly.
 Here is a high level overview of what to expect in SwitchCraft 3:
 
 ### Modpack
-- Minecraft 1.19.4
+- Minecraft 1.20.1
   - Chat reporting has been disabled, and chat now uses custom network packets
 - [Fabric](https://fabricmc.net/)
 - [Packwiz](https://packwiz.infra.link/)-based modpack updater. All mods using [Modrinth](https://modrinth.com/) or 
   custom Maven repos
 - [CC: Tweaked](https://github.com/cc-tweaked/cc-tweaked) - CC:T now running on Fabric
-- [Plethora](/whats-new/plethora) - Ported to Fabric 1.19.4 by Lemmmy
-  - View the changelist here: [Plethora 1.19.4](/whats-new/plethora)
-- [sc-peripherals](https://github.com/SwitchCraftCC/sc-peripherals) - OC 3D prints ported to Fabric 1.19.4 by Lemmmy
+- [Plethora](/whats-new/plethora) - Ported to Fabric 1.20.1 by Lemmmy
+  - View the changelist here: [Plethora 1.20.1](/whats-new/plethora)
+- [sc-peripherals](https://github.com/SwitchCraftCC/sc-peripherals) - OC 3D prints ported to Fabric 1.20.1 by Lemmmy
   - View the changelist here: [sc-peripherals](/whats-new/sc-peripherals)
 - [sc-goodies](https://github.com/SwitchCraftCC/sc-goodies) - Additional gameplay content by Lemmmy
   - Basic iron chests, in the style of cpw's [ironchest](https://github.com/progwml6/ironchest).

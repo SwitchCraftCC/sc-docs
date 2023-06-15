@@ -99,6 +99,7 @@ For the player inventory *only* (`getInventory()` with an introspection module):
     client, some components of the velocity may be delayed according to the client's latency, which will always be at 
     least 1 tick.
   - For non-player entities, these values should be identical, but the 'deltaPos' fields may be delayed by a tick.
+- **1.20**: `block.material` has been removed
 
 #### Overlay glasses
 

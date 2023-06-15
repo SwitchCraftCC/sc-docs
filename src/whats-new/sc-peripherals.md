@@ -8,7 +8,7 @@ title: sc-peripherals
 Quick link to .3dm to .3dj converter: <https://3dj.lem.sh/>
 :::
 
-[sc-peripherals](https://github.com/SwitchCraftCC/sc-peripherals) is a Fabric 1.19 
+[sc-peripherals](https://github.com/SwitchCraftCC/sc-peripherals) is a Fabric 1.20 
 [CC: Tweaked](https://github.com/cc-tweaked/cc-tweaked) peripheral mod for the SwitchCraft server. It adds a 3D printer
 in the style of [OpenComputers](https://github.com/MightyPirates/OpenComputers), and a Wide Format Printer that prints 
 custom posters to display in item frames.

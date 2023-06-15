@@ -4,7 +4,7 @@ title: sc-goodies
 
 # {{ $frontmatter.title }}
 
-[sc-goodies](https://github.com/SwitchCraftCC/sc-goodies) is a Fabric 1.19 content mod for the SwitchCraft server. It
+[sc-goodies](https://github.com/SwitchCraftCC/sc-goodies) is a Fabric 1.20 content mod for the SwitchCraft server. It
 contains a variety of features specifically designed for SwitchCraft, many of which were inspired by previous 1.12 mods
 on SwitchCraft 2 such as cpw's [ironchest](https://github.com/cpw/ironchest), ChickenBones' 
 [EnderStorage](https://github.com/TheCBProject/EnderStorage), and Vazkii's [Quark](https://github.com/VazkiiMods/Quark).
