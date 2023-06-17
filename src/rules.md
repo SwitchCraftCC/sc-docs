@@ -12,7 +12,7 @@ Above all the rules, please use common sense, and be nice to other people.
 <Rule rule="1.1">Griefing any player's work without their consent, even if it is unclaimed, is not allowed.</Rule>
 <Rule rule="1.2">Leave chests, computers and other valuables as you found them, unless you know they're naturally generated.</Rule>
 <Rule rule="1.3">Huge quarries, general purging of land/biomes etc. near spawn and other cities is unsightly and not allowed, but it is fine if it is far away from a city.</Rule>
-<Rule rule="1.4">Branding the world with anything that could be considered breaking another rule (e.g. abuse towards other players, profanity, swastikas) is not allowed. Staff may remove these without warning, and/or punish the player(s) involved.</Rule>
+<Rule rule="1.4">Branding the world with anything that could be considered breaking another rule (e.g. abuse towards other players, profanity, swastikas and other hate symbols) is not allowed. Staff may remove these without warning, and will punish the player(s) involved.</Rule>
 <Rule rule="1.5">Sending disruptive messages via modem or rednet (e.g. spamming rednet, "spoofing" GPS) is not allowed.</Rule>
 
 <h3 id="r2"><a class="rule-ref" href="#r2">§2</a> Do not attempt to crash the server or use excessive resources with 
@@ -23,12 +23,19 @@ malicious intent:</h3>
 <Rule rule="2.3">Intentional abuse of server resources is bannable (e.g. trying to DoS other services from the server, or the server itself).</Rule>
 <Rule rule="2.4">Don't build massive mob farms, or active mob farms of any kind (aggro farms).</Rule>
 <Rule rule="2.5">Ensure XP and items are collected immediately. Do not leave them to accumulate, as this can cause substantial lag.</Rule>
+<Rule rule="2.5.1" sub>Staff may place command blocks or computers to remove XP and items that are causing lag.</Rule>
 <Rule rule="2.6">Do not artificially inflate computer or peripheral IDs by creating them in excessive numbers.</Rule>
 <Rule rule="2.7">Do not store more than 50 MB of data (e.g. with computers or floppy disks) per player, service, company, or building.</Rule>
 <Rule rule="2.8">"Cinema" computers (e.g. video computers running Juroku or Sanjuuni) are limited to four 8x6 monitors at 10 FPS. Staff may turn them off at any time to help with server performance.</Rule>
-<Rule rule="2.9">Attempting to corrupt the world or 'chunk-ban' yourself or another player by creating invalid items, blocks, or network packets, is considered crashing the server and is a bannable offence.</Rule>
-<Rule rule="2.9.1" sub>Nesting containers, including shulker boxes, is considered an 'invalid item' and is a bannable offence.</Rule>
+<Rule rule="2.9">Attempting to corrupt the world or "chunk-ban" yourself or another player by creating invalid items, blocks, or network packets, is considered crashing the server and is a bannable offence.</Rule>
+<Rule rule="2.9.1" sub>Nesting containers, including shulker boxes, is considered an "invalid item" and is a bannable offence.</Rule>
 <Rule rule="2.9.2" sub>Creating items or blocks with excessive NBT data, legitimately or illegitimately, is a bannable offence.</Rule>
+<Rule rule="2.10">Arrays and "swarms" of computers or turtles are limited to the following quantities:</Rule>
+<Rule rule="2.10.1" sub>Laser turtles/manipulators: <b>maximum of 16 lasers</b>.</Rule>
+<Rule rule="2.10.2" sub>Mining/farming turtles: <b>maximum of 32 turtles</b>.</Rule>
+<Rule rule="2.10.3" sub>Other turtle arrays: <b>maximum of 64 turtles</b>.</Rule>
+<Rule rule="2.10.4" sub>If you have more than four turtles in an array with block scanners, please talk to a member of staff so we can see if it may be a performance concern.</Rule>
+<Rule rule="2.11">Please remember that the staff are only trying to keep the server fair for everybody. We are all sharing the same resources, do not be greedy or selfish with how you play as it is disrespectful to other players and the server.</Rule>
 
 <h3 id="r3"><a class="rule-ref" href="#r3">§3</a> Do not exploit bugs or cheat in any way. If you find a bug, it must be 
 disclosed responsibly to the staff:</h3>
@@ -107,11 +114,15 @@ players without their informed consent:</h3>
 Attempting to evade a previous punishment may result in extension or escalation of the punishment. A mute may be 
 extended, or could be turned into a temporary ban.
 
-- Admins and moderators interpret the rules. You cannot argue about special cases.
+- <b>Staff interpret the rules. You cannot argue about special cases.</b>
+- "Talking back" to staff or otherwise being rude or disrespectful can result in a mute, escalation to a temporary ban, 
+  or the extension of an existing mute or temporary ban.
+  - Remember that staff are only trying to make the server a safe, fair and fun place for everybody, and have no reason
+    to tolerate disrespect when they are trying to help you.
 - Evading a chat mute in-game (e.g. with another account, by proxy of another player, via chatboxes, chatbox commands,
-  regular commands) can result in extension of the mute, or escalation to a tempban.
+  regular commands) can result in extension of the mute, or escalation to a temporary ban.
 - Evading a Discord mute (e.g. with another account, or by proxy of another player) can result in extension of the mute,
-  or escalation to a tempban.
+  or escalation to a temporary ban.
 - Evading a ban, in-game and/or in Discord, by creating/using alt accounts can result in a permanent ban on all
   associated accounts.
 - Harassing other players or staff regarding the reasoning for a mute or ban, or arguing with the terms of the mute or
