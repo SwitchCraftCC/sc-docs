@@ -66,7 +66,8 @@ joins or leaves. It will contain an array of [user objects](#user-object) as `pl
     "afk": false,
     "alt": false,
     "bot": false,
-    "supporter": 0
+    "supporter": 0,
+    "linkedUser": { /* ... */ }
   }]
 }
 ```
@@ -109,7 +110,8 @@ Example of an `event` packet for the [`chat_ingame`](#in-game-chat-event) event:
     "afk": false,
     "alt": false,
     "bot": false,
-    "supporter": 0
+    "supporter": 0,
+    "linkedUser": { /* ... */ }
   }
 }
 ```
@@ -135,7 +137,8 @@ Example of an `event` packet for a [`chat_discord`](#discord-chat-event) event:
       "id": "198138742333112320",
       "name": "Administrator",
       "colour": 15158332
-    }]
+    }],
+    "linkedUser": { /* ... */ }
   },
   "time": "2020-03-28T05:15:36+01:00",
   "edited": false,
@@ -164,7 +167,8 @@ Example of an `event` packet for the [`death`](#death-event) event:
     "afk": false,
     "alt": false,
     "bot": false,
-    "supporter": 0
+    "supporter": 0,
+    "linkedUser": { /* ... */ }
   },
   "source": { /* ...player object... */ },
 }
@@ -359,7 +363,8 @@ The [event](#event-packet) received when a player posts a message in public chat
     "afk": false,
     "alt": false,
     "bot": false,
-    "supporter": 0
+    "supporter": 0,
+    "linkedUser": { /* ... */ }
   },
   "time": "2022-07-12T18:54:01+01:00"
 }
@@ -410,7 +415,8 @@ The [event](#event-packet) received when a player posts a message in [Discord](h
       "id": "198138742333112320",
       "name": "Administrator",
       "colour": 15158332
-    }]
+    }],
+    "linkedUser": { /* The linked Minecraft player, if available */ }
   },
   "edited": false,
   "time": "2022-07-12T18:53:50+01:00"
@@ -492,7 +498,8 @@ owner-only caret/pipe commands: `^command`) in-game. The `command` capability is
     "afk": false,
     "alt": false,
     "bot": false,
-    "supporter": 0
+    "supporter": 0,
+    "linkedUser": { /* ... */ }
   },
   "command": "example",
   "args": [
@@ -603,7 +610,8 @@ The [event](#event-packet) received when a player dies in-game.
     "afk": false,
     "alt": false,
     "bot": false,
-    "supporter": 0
+    "supporter": 0,
+    "linkedUser": { /* ... */ }
   },
   "time": "2022-07-12T20:37:00+01:00"
 }
@@ -704,7 +712,8 @@ The [event](#event-packet) received when a player returns from being AFK in-game
     "afk": false,
     "alt": false,
     "bot": false,
-    "supporter": 0
+    "supporter": 0,
+    "linkedUser": { /* ... */ }
   },
   "time": "2022-07-12T20:55:40+01:00"
 }
@@ -795,6 +804,10 @@ The `supporter` field is the current public tier of the player's supporter statu
 a supporter or has opted out of showing their supporter tag, `1` for a Tier 1 supporter, `2` for a Tier 2 supporter, and
 `3` for a Tier 3 supporter.
 
+If the player has linked their Discord account to their Minecraft account, then the `linkedUser` field will be present
+and will contain the linked Discord user (as a [Discord user object](#discord-user-object)). The nested Discord user
+will *not* contain another `linkedUser` field to avoid recursive serialization.
+
 Example of a user object:
 
 ```json5
@@ -809,13 +822,21 @@ Example of a user object:
   "afk": false,
   "alt": false,
   "bot": false,
-  "supporter": 0
+  "supporter": 0,
+  "linkedUser": { 
+    /* The linked Discord user, if available */
+    "type": "discord",
+    /* ... */
+  }
 }
 ```
 
 ### Discord user object
 
-The Discord user object represents a user on [Discord](https://discord.sc3.io).
+The Discord user object represents a user on [Discord](https://discord.sc3.io). If the user has linked their Discord
+account to their Minecraft account, then the `linkedUser` field will be present and will contain the linked Minecraft
+player (as a [user object](#user-object)). The nested Minecraft player will *not* contain another `linkedUser` field to
+avoid recursive serialization.
 
 Example of a Discord user object:
 
@@ -831,7 +852,12 @@ Example of a Discord user object:
     "id": "198138742333112320",
     "name": "Administrator",
     "colour": 15158332
-  }]
+  }],
+  "linkedUser": { 
+    /* The linked Minecraft player, if available */ 
+    "type": "ingame",
+    /* ... */
+  }
 }
 ```
 
