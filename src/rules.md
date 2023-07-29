@@ -35,7 +35,10 @@ malicious intent:</h3>
 <Rule rule="2.10.2" sub>Mining/farming turtles: <b>maximum of 32 turtles</b>.</Rule>
 <Rule rule="2.10.3" sub>Other turtle arrays: <b>maximum of 64 turtles</b>.</Rule>
 <Rule rule="2.10.4" sub>If you have more than four turtles in an array with block scanners, please talk to a member of staff so we can see if it may be a performance concern.</Rule>
-<Rule rule="2.11">Please remember that the staff are only trying to keep the server fair for everybody. We are all sharing the same resources, do not be greedy or selfish with how you play as it is disrespectful to other players and the server.</Rule>
+<Rule rule="2.11">Large poster grids are limited to a <b>maximum size of 8x8</b> in the general vicinity of spawn, or otherwise public areas.</Rule>
+<Rule rule="2.11.1" sub>Staff reserve the right to remove any poster anywhere for any reason.</Rule>
+<Rule rule="2.11.2" sub>The classification of a public area is determined at the discretion of staff.</Rule>
+<Rule rule="2.12">Please remember that the staff are only trying to keep the server fair for everybody. We are all sharing the same resources, do not be greedy or selfish with how you play as it is disrespectful to other players and the server.</Rule>
 
 <h3 id="r3"><a class="rule-ref" href="#r3">§3</a> Do not exploit bugs or cheat in any way. If you find a bug, it must be 
 disclosed responsibly to the staff:</h3>
