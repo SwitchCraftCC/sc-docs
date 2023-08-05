@@ -100,6 +100,7 @@ For the player inventory *only* (`getInventory()` with an introspection module):
     least 1 tick.
   - For non-player entities, these values should be identical, but the 'deltaPos' fields may be delayed by a tick.
 - **1.20**: `block.material` has been removed
+- `trinkets` has been added to entity meta (similar to armor slots, and Baubles on 1.12)
 
 #### Overlay glasses
 
