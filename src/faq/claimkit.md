@@ -83,3 +83,12 @@ Valid flag names are:
 
 - `explosions`: allows explosions within the claim, disabled by default
 - `mobSpawn`: allows mobs to spawn within the claim, disabled by default
+- `attackHostile`
+- `protectHostile`
+- `accessContainers`
+- `pvp`
+- `disableTeleportation`: prevents most non-command teleportations into/out of the claim, disabled by default:
+  - Prevents named Endermen from teleporting out of claims
+  - Prevents Endermen from teleporting into/within claims
+  - Prevents untrusted players from teleporting into/within claims, with Ender Pearls and Chorus Fruit
+  - Prevents pets (Wolves/Cats) from teleporting to their owners inside a claim they are not trusted in
