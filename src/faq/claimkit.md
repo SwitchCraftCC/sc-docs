@@ -79,16 +79,14 @@ A three-dimensional claim has the same cost as a two-dimensional claim with the 
 Enabled claim flags are visible in `/claiminfo`.
 To toggle a flag, run `/toggleflag <flag name>`.
 
-Valid flag names are:
-
-- `explosions`: allows explosions within the claim, disabled by default
-- `mobSpawn`: allows mobs to spawn within the claim, disabled by default
-- `attackHostile`
-- `protectHostile`
-- `accessContainers`
-- `pvp`
-- `disableTeleportation`: prevents most non-command teleportations into/out of the claim, disabled by default:
+- `accessContainers`: Allows players with `ACCESS` trust (`/accesstrust`) to open containers like chests and chiseled 
+  bookshelves without needing basic trust.
+- `attackHostile`: Allows untrusted players to attack hostile mobs within the claim.
+- `disableTeleportation`: Prevents most non-command teleportations into/out of the claim:
   - Prevents named Endermen from teleporting out of claims
   - Prevents Endermen from teleporting into/within claims
   - Prevents untrusted players from teleporting into/within claims, with Ender Pearls and Chorus Fruit
   - Prevents pets (Wolves/Cats) from teleporting to their owners inside a claim they are not trusted in
+- `explosions`: Allows explosions within the claim.
+- `mobSpawn`: Allows mobs to spawn within the claim.
+- `pvp`: Allows untrusted players to attack each other within the claim.
