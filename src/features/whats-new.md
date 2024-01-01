@@ -27,10 +27,10 @@ Here is a high level overview of what to expect in SwitchCraft 3:
 - [Packwiz](https://packwiz.infra.link/)-based modpack updater. All mods using [Modrinth](https://modrinth.com/) or 
   custom Maven repos
 - [CC: Tweaked](https://github.com/cc-tweaked/cc-tweaked) - CC:T now running on Fabric
-- [Plethora](/whats-new/plethora) - Ported to Fabric 1.20.1 by Lemmmy
-  - View the changelist here: [Plethora 1.20.1](/whats-new/plethora)
+- [Plethora](/features/plethora) - Ported to Fabric 1.20.1 by Lemmmy
+  - View the changelist here: [Plethora 1.20.1](/features/plethora)
 - [sc-peripherals](https://github.com/SwitchCraftCC/sc-peripherals) - OC 3D prints ported to Fabric 1.20.1 by Lemmmy
-  - View the changelist here: [sc-peripherals](/whats-new/sc-peripherals)
+  - View the changelist here: [sc-peripherals](/features/sc-peripherals)
 - [sc-goodies](https://github.com/SwitchCraftCC/sc-goodies) - Additional gameplay content by Lemmmy
   - Basic iron chests, in the style of cpw's [ironchest](https://github.com/progwml6/ironchest).
     - This is a significantly more primitive take on the iron chests concept with "no BS" - it simply adds iron, gold,
@@ -59,7 +59,7 @@ Here is a high level overview of what to expect in SwitchCraft 3:
 - ClaimKit - **Claim protection mod written from scratch by [kotahu](https://github.com/kotahu)**
   - Create a "claim" around your base or belongings, and only allow players you trust to access it, in the style of
     [GriefPrevention](https://github.com/MinecraftPortCentral/GriefPrevention/)
-  - View the documentation here: [ClaimKit](/faq/claimkit)
+  - View the documentation here: [ClaimKit](/features/claimkit)
 - KristPay - **Krist wallet mod written from scratch by [anemonemma](https://github.com/emmachase)**
   - In-game Balance overlay
   - **/pay autocompletion** when looking at ComputerCraft Monitors, signs, and chat history containing names and 
@@ -83,7 +83,7 @@ Here is a high level overview of what to expect in SwitchCraft 3:
   <ItemImg img="staff-icon-1" alt="Staff icon 1" />&nbsp;
   <ItemImg img="staff-icon-2" alt="Staff icon 2" />
 - Monthly Supporter goal in the tablist
-- [Krist-based chunkloaders](/whats-new/chunkloaders)
+- [Krist-based chunkloaders](/features/chunkloaders)
   - Pay once to unlock chunkloading limits
   - Keep chunks loaded only when you are online
   - Offline chunks available to be loaded when you are offline for up to 30 days

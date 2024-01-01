@@ -6,7 +6,7 @@ export default defineConfig({
   description: "SwitchCraft 3 Documentation",
 
   head: [
-    ["meta", { name: "theme-color", content: "#3eaf7c" }],
+    ["meta", { name: "theme-color", content: "#43d646" }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
     ["meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }],
 
@@ -45,14 +45,14 @@ export default defineConfig({
     sidebar: [
       { text: "Rules", link: "/rules.md" },
       {
-        text: "What's New in SwitchCraft 3",
-        link: "/whats-new/",
+        text: "Features & Mods",
         items: [
-          { link: "/whats-new/", text: "Overview" },
-          { link: "/whats-new/plethora", text: "Plethora" },
-          { link: "/whats-new/sc-goodies", text: "sc-goodies" },
-          { link: "/whats-new/sc-peripherals", text: "sc-peripherals" },
-          { link: "/whats-new/chunkloaders", text: "Chunkloaders" },
+          { link: "/features/whats-new", text: "What's New in SwitchCraft 3" },
+          { link: "/features/chunkloaders", text: "Chunkloaders" },
+          { link: "/features/claimkit", text: "ClaimKit" },
+          { link: "/features/plethora", text: "Plethora" },
+          { link: "/features/sc-goodies", text: "sc-goodies" },
+          { link: "/features/sc-peripherals", text: "sc-peripherals" },
         ]
       },
       {
@@ -60,7 +60,6 @@ export default defineConfig({
         items: [
           { link: "https://github.com/SwitchCraftCC/issues", text: "Reporting issues" },
           { link: "/faq/api", text: "API" },
-          { link: "/faq/claimkit", text: "ClaimKit" },
           { link: "/faq/privacy", text: "Privacy Policy" },
           { link: "/faq/pronouns", text: "Pronouns" },
           { link: "/faq/rom", text: "ROM" },
@@ -84,7 +83,8 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/SwitchCraftCC/sc-docs" }
+      { icon: "discord", link: "https://discord.sc3.io" },
+      { icon: "github", link: "https://github.com/SwitchCraftCC/sc-docs" },
     ]
   }
 });
