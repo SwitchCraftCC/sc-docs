@@ -165,7 +165,7 @@ A 2dj file is a JSON file with the following structure:
 
 Poster palettes are limited to 63 colors plus one transparent color. The first color in the palette (index 0) is
 fully transparent, and the remaining 63 colors (index 1 onward) are fully opaque but customizable. By default, the
-posters use the same palette as [vanilla maps](https://minecraft.fandom.com/wiki/Map_item_format#Base_colors), e.g.
+posters use the same palette as [vanilla maps](https://minecraft.wiki/w/Map_item_format#Base_colors), e.g.
 0 is NONE, 1 is <ColorName color="rgb(127, 178, 56)">GRASS</ColorName>, 
 2 is <ColorName color="rgb(247, 233, 163)">SAND</ColorName>, etc.
 

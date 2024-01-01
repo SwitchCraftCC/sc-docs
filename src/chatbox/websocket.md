@@ -256,7 +256,7 @@ Sends a message to the in-game public chat.
 * `mode` - (*optional*) The formatting mode to use. You can use these formatting modes:
   * `markdown` - (**default**) Discord-like [Markdown syntax](https://support.discord.com/hc/en-us/articles/210298617-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline-).
     Supports URLs, but not colours.
-  * `format` - Minecraft-like [formatting codes](https://minecraft.fandom.com/wiki/Formatting_codes) using ampersands
+  * `format` - Minecraft-like [formatting codes](https://minecraft.wiki/w/Formatting_codes) using ampersands
     (e.g. `&e` for yellow). Supports colours, but not URLs.
 * `id` - (*optional*) Numeric ID to identify this message. If specified, the [`success`](#success-packet) response 
   packet will contain this ID so you can identify when this specific message has been sent.
@@ -287,7 +287,7 @@ is not online in-game, you will receive the `unknown_user` error.
 * `mode` - (*optional*) The formatting mode to use. You can use these formatting modes:
   * `markdown` - (**default**) Discord-like [Markdown syntax](https://support.discord.com/hc/en-us/articles/210298617-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline-).
     Supports URLs, but not colours.
-  * `format` - Minecraft-like [formatting codes](https://minecraft.fandom.com/wiki/Formatting_codes) using ampersands
+  * `format` - Minecraft-like [formatting codes](https://minecraft.wiki/w/Formatting_codes) using ampersands
     (e.g. `&e` for yellow). Supports colours, but not URLs.
 * `id` - (*optional*) Numeric ID to identify this message. If specified, the [`success`](#success-packet) response
   packet will contain this ID so you can identify when this specific message has been sent.
@@ -865,7 +865,7 @@ Example of a Discord user object:
 
 Messages will be accompanied by their string representation (`text`) as well as their in-game rich text representation
 (`renderedText`). The rendered text is serialised as a JSON object conforming to the Minecraft 
-[raw JSON text format](https://minecraft.fandom.com/wiki/Raw_JSON_text_format). As rendered text is generated
+[raw JSON text format](https://minecraft.wiki/w/Raw_JSON_text_format). As rendered text is generated
 automatically by the server, it is not guaranteed that you will receive the same JSON for every version, and the
 serialised form may not be optimal or compact.
 
