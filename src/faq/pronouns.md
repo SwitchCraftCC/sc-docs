@@ -16,6 +16,14 @@ account with PronounDB, and have linked your Minecraft account, then your pronou
 you log in. If they are different to your current pronouns on the server, you will be prompted to change them. You can
 accept the change by clicking the "Yes" button, or disable this entirely by clicking the "Don't ask again" button.
 
+Pronouns from PronounDB are mapped according to the following rules:
+- If your first pronoun set is a meta set (i.e. `any`, `ask`, `avoid`, `other`), it is used as-is and the rest of the
+  sets are ignored.
+- If you have two or more nominative pronoun sets, the first pronoun from the first set and the first pronoun from the 
+  second set are used. The third set is always ignored. For example, `he/him` + `they/them` would be mapped 
+  to `he/they`.
+- If you have only one pronoun set, it is used as-is.
+
 ### Supported pronouns
 
 The server currently supports the following pronouns, sorted alphabetically to avoid bias:
