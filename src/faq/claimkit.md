@@ -2,7 +2,7 @@
 title: ClaimKit
 ---
 
-# {{ $frontmatter.title }}
+# ClaimKit
 
 ClaimKit is SwitchCraft's land claim plugin. Its features and interface should be familiar for SwitchCraft 2 players.
 

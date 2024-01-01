@@ -2,7 +2,7 @@
 title: ROM
 ---
 
-# {{ $frontmatter.title }}
+# ROM
 
 [View the ROM on GitHub](https://github.com/SwitchCraftCC/sc3-rom)
 

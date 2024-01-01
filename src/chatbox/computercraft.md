@@ -2,7 +2,7 @@
 title: ComputerCraft API
 ---
 
-# {{ $frontmatter.title }}
+# ComputerCraft API
 
 [[toc]]
 

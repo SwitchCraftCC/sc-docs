@@ -2,7 +2,12 @@
 title: sc-goodies
 ---
 
-# {{ $frontmatter.title }}
+<script setup>
+import DyeImg from "../components/DyeImg.vue";
+import ItemImg from "../components/ItemImg.vue";
+</script>
+
+# sc-goodies
 
 [sc-goodies](https://github.com/SwitchCraftCC/sc-goodies) is a Fabric 1.20 content mod for the SwitchCraft server. It
 contains a variety of features specifically designed for SwitchCraft, many of which were inspired by previous 1.12 mods
@@ -26,17 +31,17 @@ Higher-capacity variants of chests, barrels, and shulker boxes are added to the 
 <ul>
   <li>
     <img src="/img/sc-goodies/iron_storage.png" alt="Iron Chest, Barrel, and Shulker Box" 
-      title="Iron Chest, Barrel, and Shulker Box" style="height: 32px; vertical-align: bottom" />
+      title="Iron Chest, Barrel, and Shulker Box" className="h-8 inline-block align-bottom" />
     Iron - 54 slots (9x6)
   </li>
   <li>
     <img src="/img/sc-goodies/gold_storage.png" alt="Gold Chest, Barrel, and Shulker Box" 
-      title="Gold Chest, Barrel, and Shulker Box" style="height: 32px; vertical-align: bottom" />
+      title="Gold Chest, Barrel, and Shulker Box" className="h-8 inline-block align-bottom" />
     Gold - 81 slots (9x9)
   </li>
   <li>
     <img src="/img/sc-goodies/diamond_storage.png" alt="Diamond Chest, Barrel, and Shulker Box" 
-      title="Diamond Chest, Barrel, and Shulker Box" style="height: 32px; vertical-align: bottom" />
+      title="Diamond Chest, Barrel, and Shulker Box" className="h-8 inline-block align-bottom" />
     Diamond - 108 slots (12x9)
   </li>
 </ul>
@@ -75,16 +80,13 @@ dimensions. The frequency can be changed by right-clicking the three slots on to
 
 ### Personal frequencies
 
-If a player right-clicks the handle of the Ender Storage with a 
-<img src="/img/diamond.png" alt="Diamond" title="Diamond" style="vertical-align: bottom; margin-right: -4px" /> diamond, 
-it becomes a Personal Ender Storage chest. The contents of this chest are unique to the player who placed the diamond, 
-and only that player can change its frequency. The diamond can be recovered by shift+right-clicking the chest with an 
-empty hand.
+If a player right-clicks the handle of the Ender Storage with a <ItemImg img="diamond" name="Diamond" />, it becomes a
+Personal Ender Storage chest. The contents of this chest are unique to the player who placed the diamond, and only that 
+player can change its frequency. The diamond can be recovered by shift+right-clicking the chest with an empty hand.
 
 For security reasons, the frequency of a Personal Ender Storage chest cannot be changed by ComputerCraft by default. To
-allow this behavior, right-click the handle of the chest with an 
-<img src="/img/emerald.png" alt="Emerald" title="Emerald" style="vertical-align: bottom; margin: 0 -4px" /> emerald. 
-This will enable ComputerCraft to change the frequency of the chest.
+allow this behavior, right-click the handle of the chest with an <ItemImg img="emerald" name="Emerald" />. This will 
+enable ComputerCraft to change the frequency of the chest.
 
 ::: warning
 If you use an emerald on a Personal Ender Storage chest, **any** player with physical access to the chest will be able
@@ -153,9 +155,8 @@ the Toggle Item Magnet hotkey (<kbd>M</kbd> by default).
 ### Range
 
 By default, the magnet attracts items within a 3 block radius. This can be upgraded by crafting the Item Magnet with
-a <ItemImg img="nether_star" name="Nether Star" /> Nether Star and 
-a <ItemImg img="netherite_ingot" name="Netherite Ingot" /> Netherite Ingot. Upgrades can be applied multiple times, 
-increasing the range by 1 block each time, up to a maximum of 6 blocks.
+a <ItemImg img="nether_star" name="Nether Star" /> and a <ItemImg img="netherite_ingot" name="Netherite Ingot" />. 
+Upgrades can be applied multiple times, increasing the range by 1 block each time, up to a maximum of 6 blocks.
 
 ## Concrete and Slabs and Stairs
 

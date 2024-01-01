@@ -2,7 +2,7 @@
 title: Sodium & Indium
 ---
 
-# {{ $frontmatter.title }}
+# Sodium & Indium
 
 [[toc]]
 

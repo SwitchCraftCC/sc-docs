@@ -2,7 +2,7 @@
 title: Pronouns
 ---
 
-# {{ $frontmatter.title }}
+# Pronouns
 
 [[toc]]
 

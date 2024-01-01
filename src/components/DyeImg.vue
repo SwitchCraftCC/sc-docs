@@ -3,7 +3,8 @@
 </template>
 
 <script>
-import ItemImg from './ItemImg.vue'
+import ItemImg from "./ItemImg.vue";
+
 export default {
   props: {
     color: String

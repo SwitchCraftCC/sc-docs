@@ -2,7 +2,11 @@
 title: Supporters
 ---
 
-# {{ $frontmatter.title }}
+<script setup>
+import SupporterTag from "../components/SupporterTag.vue";
+</script>
+
+# Supporters
 
 Players with this <SupporterTag :tier="1" /> tag appearing next to their name in chat and the tablist are 
 <span style="color: #55FFFF">SwitchCraft Supporters</span>. This means that they have paid to help keep the server 
@@ -13,8 +17,7 @@ Supporter goes directly towards server upkeep and maintenance costs, helping Swi
 
 By becoming a <span color="#55FFFF">Supporter</span>, you will receive multiple tags:
 - <SupporterTag :tier=1 /> next to your name in-game
-- <SupporterTag :tier=1 svg /> <span style="color: #55FFFF">Supporter</span> role on our
-  [Discord](https://discord.sc3.io)
+- <SupporterTag :tier=1 svg /> <span style="color: #55FFFF">Supporter</span> role on our [Discord](https://discord.sc3.io)
 - <span style="color: #55FFFF">Supporter</span> role on the 
   [ComputerCraft:Tweaked Forums](https://forums.computercraft.cc)
 

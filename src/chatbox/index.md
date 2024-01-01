@@ -2,7 +2,7 @@
 title: Chatbox Introduction
 ---
 
-# {{ $frontmatter.title }}
+# Chatbox Introduction
 
 SwitchCraft uses a server-side chatbox system (instead of peripherals). This has several benefits:
 

@@ -2,7 +2,7 @@
 title: SwitchCraft 2 Computer Dump
 ---
 
-# {{ $frontmatter.title }}
+# SwitchCraft 2 Computer Dump
 
 You can download a .zip archive of your computers and homes from SwitchCraft 2 by running the `/sc2dump` command. The 
 dump contains a listing of all your computers, and all their files in the computer directory. The server may take a few 

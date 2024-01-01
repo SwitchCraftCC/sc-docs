@@ -2,7 +2,7 @@
 title: Privacy Policy
 ---
 
-# {{ $frontmatter.title }}
+# Privacy Policy
 
 [[toc]]
 

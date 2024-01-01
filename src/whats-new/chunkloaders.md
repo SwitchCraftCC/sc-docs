@@ -2,7 +2,11 @@
 title: Chunkloaders
 ---
 
-# {{ $frontmatter.title }}
+<script setup>
+import KristValue from "../components/KristValue.vue";
+</script>
+
+# Chunkloaders
 
 [[toc]]
 

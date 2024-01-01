@@ -7,21 +7,21 @@
     "name": "Drew Edwards",
     "email": "github@drew.contact"
   },
+  "type": "module",
   "repository": "SwitchCraftCC/sc-docs",
   "scripts": {
-    "dev": "vuepress dev src",
-    "build": "vuepress build src",
-    "postinstall": "patch-package"
+    "dev": "vitepress dev src",
+    "build": "vitepress build src",
+    "preview": "vitepress preview src"
   },
   "license": "MIT",
   "devDependencies": {
-    "patch-package": "^6.4.7",
-    "postinstall-postinstall": "^2.1.0",
-    "vue-template-compiler": "^2.7.10",
-    "vuepress": "^1.5.3"
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "vitepress": "^1.0.0-rc.34"
   },
   "dependencies": {
-    "vue": "^2.7.10",
-    "vuepress-theme-yuu": "^3.1.1"
+    "vue": "^3.4.3"
   }
 }

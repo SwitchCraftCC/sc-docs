@@ -2,7 +2,7 @@
 title: Websocket API
 ---
 
-# {{ $frontmatter.title }}
+# Websocket API
 
 [[toc]]
 

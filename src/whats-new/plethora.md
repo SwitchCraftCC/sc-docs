@@ -2,7 +2,11 @@
 title: Plethora 1.20.1
 ---
 
-# {{ $frontmatter.title }}
+<script setup>
+import NYI from "../components/NYI.vue";
+</script>
+
+# Plethora 1.20.1
 
 [View Plethora-Fabric on GitHub](https://github.com/SwitchCraftCC/Plethora-Fabric)
 

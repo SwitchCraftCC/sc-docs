@@ -2,7 +2,7 @@
 title: Changes in v2
 ---
 
-# {{ $frontmatter.title }}
+# Changes in v2
 
 [[toc]]
 

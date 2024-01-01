@@ -2,7 +2,7 @@
 title: API
 ---
 
-# {{ $frontmatter.title }}
+# API
 
 [[toc]]
 

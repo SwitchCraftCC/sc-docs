@@ -2,7 +2,11 @@
 title: sc-peripherals
 ---
 
-# {{ $frontmatter.title }}
+<script setup>
+import ColorName from "../components/ColorName.vue";
+</script>
+
+# sc-peripherals
 
 ::: tip
 Quick link to .3dm to .3dj converter: <https://3dj.lem.sh/>

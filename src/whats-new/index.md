@@ -2,7 +2,12 @@
 title: What's New in SwitchCraft 3
 ---
 
-# {{ $frontmatter.title }}
+<script setup>
+import SupporterTag from "../components/SupporterTag.vue";
+import ItemImg from "../components/ItemImg.vue";
+</script>
+
+# What's New in SwitchCraft 3
 
 [[toc]]
 
@@ -69,12 +74,14 @@ Here is a high level overview of what to expect in SwitchCraft 3:
   - `pastebin get` and `pastebin run` will work with both SCPaste and Pastebin URLs and IDs
   - Replaces `pastebin put` - all pastes uploaded on SwitchCraft will go to SCPaste instead of Pastebin
   - Log in with GitHub or Discord to save, edit and protect your pastes
-- New [Supporter tiers](/faq/supporter) ![Supporter Tier 1](/img/supporter-tier-1.png) ![Supporter Tier 2](/img/supporter-tier-2.png) ![Supporter Tier 3](/img/supporter-tier-3.png)
+- New [Supporter tiers](/faq/supporter) <SupporterTag :tier=1 /><SupporterTag :tier=2 /><SupporterTag :tier=3 />
   - You can now view your supporter status, including lifetime contribution, by simply running `/supporter`
   - You can choose which supporter tier to show publicly by running `/supporter tier <1-3>` or `/supporter tier auto`
   - You can also now opt out of showing your supporter tag publicly by running `/supporter opt out`
   - Supporters now have access to the `/hat` command
-- Staff icons in chat ![Staff Icon 1](/img/staff-icon-1.png) ![Staff Icon 2](/img/staff-icon-2.png)
+- Staff icons in chat&nbsp;
+  <ItemImg img="staff-icon-1" alt="Staff icon 1" />&nbsp;
+  <ItemImg img="staff-icon-2" alt="Staff icon 2" />
 - Monthly Supporter goal in the tablist
 - [Krist-based chunkloaders](/whats-new/chunkloaders)
   - Pay once to unlock chunkloading limits
@@ -89,7 +96,7 @@ Here is a high level overview of what to expect in SwitchCraft 3:
     - **Avatars are rendered in chat** next to the message. This can be disabled in the SwitchCraft Client Mod settings.
     - Video and file attachment links
     - Icons for image, video and file attachments
-    - Discord icon in chat ![Discord Bridge Icon](/img/discord-bridge-icon.png)
+    - Discord icon in chat <ItemImg img="discord-bridge-icon" alt="Discord bridge icon" />
   - Improvements on the Discord side include:
     - `/list` command to list players currently online
     - Pinned messages in `#welcome` and `#server-chat` with the player list and count
@@ -106,7 +113,11 @@ Here is a high level overview of what to expect in SwitchCraft 3:
     - This can optionally play a sound and send a system notification (both on by default)
     - You can also add additional highlight words in the config
   - Your own chat messages can be coloured differently (off by default)
-- Death icons in chat ![Death icon - Generic](/img/death-icon-1.png) ![Death icon - Killed by a player](/img/death-icon-2.png) ![Death icon - Burned to death](/img/death-icon-3.png) ![Death icon - Exploded](/img/death-icon-4.png)
+- Death icons in chat&nbsp;
+  <ItemImg img="death-icon-1" alt="Death icon - generic" />&nbsp;
+  <ItemImg img="death-icon-2" alt="Death icon - Killed by a player" />&nbsp;
+  <ItemImg img="death-icon-3" alt="Death icon - Burned to death" />&nbsp;
+  <ItemImg img="death-icon-4" alt="Death icon - Exploded" />
 - Active time tracking, including per-session and per-day, with in-game overlay in the tablist<br />![](/img/tablist.png)
   - You can now opt out of the public active time leaderboard by running `/activetime opt out`
 - Server restart countdowns and notification sound<br />![](/img/restart-countdown.png)
