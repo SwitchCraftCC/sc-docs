@@ -1,8 +1,6 @@
 FROM node:16-alpine
 WORKDIR /build
-COPY package.json yarn.lock ./
-COPY patches patches/
-RUN yarn add patch-package postinstall-postinstall
+COPY yarn.lock ./
 RUN yarn install
 COPY . .
 
