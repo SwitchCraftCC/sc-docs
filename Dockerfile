@@ -1,6 +1,6 @@
-FROM node:16-alpine
+FROM node:18-alpine
 WORKDIR /build
-COPY yarn.lock ./
+COPY package.json yarn.lock ./
 RUN yarn install
 COPY . .
 
