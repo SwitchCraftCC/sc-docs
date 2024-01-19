@@ -53,6 +53,7 @@
   --vp-c-brand-2: #43d646;
   --vp-c-brand-3: #64dd67;
   --vp-c-brand-soft: rgba(30, 139, 32, 0.14);
+  --vp-nav-logo-height: 32px;
 }
 
 .dark {
@@ -152,3 +153,10 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+/**
+ * SC: Pixelated logo
+ * -------------------------------------------------------------------------- */
+
+.VPImage.logo {
+  image-rendering: pixelated;
+}
