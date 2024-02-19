@@ -1,6 +1,6 @@
 <template>
   <h3 id="r{{rule}}">
-    <a class="!no-underline" href="#r{{rule}}">§{{rule}}</a>
+    <a class="!no-underline" :href="`#r${rule}`">§{{rule}}</a>
     <slot />
   </h3>
 </template>
