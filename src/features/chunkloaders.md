@@ -26,7 +26,8 @@ information in-game by running `/chunkloader`.
 
 There are two types of chunks:
 - Loaded chunks: These chunks are only loaded when you are **online**.
-- Offline chunks: These chunks are **always loaded**, even when you are offline, for up to 30 days since your last login.
+- Offline chunks: These chunks are **always loaded**, even when you are offline, for up to 14 days since your last 
+  login.
 
 You can have a maximum of **9** loaded chunks, and a maximum of **2** offline chunks. Chunks can be 'loaded' and 
 'unloaded' (allocated and unallocated) at-will at no cost by running `/chunkloader load` and 
@@ -36,7 +37,7 @@ By default, your chunkloading limit will be 0 loaded chunks and 0 offline chunks
 limit with a **one-time payment** by running `/chunkloader unlock`. Every 4 loaded chunks you unlock will grant you 1 
 offline chunk. 
 
-If you are offline for more than 30 days, your offline chunks will no longer be loaded. When you next log in, they will
+If you are offline for more than 14 days, your offline chunks will no longer be loaded. When you next log in, they will
 automatically become loaded again.
 
 ## Prices
@@ -69,7 +70,7 @@ All payments are one-time only. You will not be charged for having chunks loaded
 ## Public services and free chunkloading
 
 If you operate a public service on SwitchCraft, you may be eligible for free chunkloading. Free chunkloading is 
-guaranteed offline chunk loading with no 30-day limit, and does not count towards your loaded chunk limits. Please 
+guaranteed offline chunk loading with no 14-day limit, and does not count towards your loaded chunk limits. Please 
 contact a member of the staff team to discuss your eligibility. 
 
 A chunk containing parts of your base that are not part of your public service will not be eligible for free
