@@ -135,6 +135,14 @@ Sets the frequency of the chest. The numbers passed are equivalent to the Comput
 enderStorage.setFrequency(colors.white, colors.white, colors.white)
 ```
 
+### `enderStorage.getName(): string`
+
+Returns the custom name of the chest's frequency, if it has one, or `nil` otherwise.
+
+### `enderStorage.getDescription(): string`
+
+Returns the custom description of the chest's frequency, if it has one, or `nil` otherwise.
+
 ## Hover Boots
 <img src="/img/sc-goodies/hover_boots.png" alt="Hover Boots" title="Hover Boots"
   style="float: right; margin-left: 16px" />
