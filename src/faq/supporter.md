@@ -23,6 +23,8 @@ By becoming a <span color="#55FFFF">Supporter</span>, you will receive multiple 
 
 You will also receive the following cosmetic perks in-game:
 - The `/hat` command, which allows you to wear any block in your head slot
+- The `/sleep` command, which allows you to sleep in any location, without a bed, and even during the day
+- The `/fly` command in the lobby
 
 And the following additional perks on our [Discord](https://discord.sc3.io):
 - Access to the exclusive `#supporters` chat channel
