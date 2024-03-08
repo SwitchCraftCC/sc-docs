@@ -55,6 +55,7 @@ export default defineConfig({
           { link: "/features/plethora", text: "Plethora" },
           { link: "/features/sc-goodies", text: "sc-goodies" },
           { link: "/features/sc-peripherals", text: "sc-peripherals" },
+          { link: "/features/switchmarket", text: "SwitchMarket" },
         ]
       },
       {
