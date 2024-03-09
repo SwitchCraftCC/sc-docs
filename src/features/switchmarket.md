@@ -20,22 +20,25 @@ your bid will be refunded to you immediately (English auction), or when the auct
 
 There are three types of auctions supported by SwitchMarket:
 
-- **[English auction](https://en.wikipedia.org/wiki/English_auction)**: The price starts low and increases as players
-  bid. The highest bidder wins, and pays the amount they bid.
-- **[Sealed-bid auction](https://en.wikipedia.org/wiki/First-price_sealed-bid_auction)**: Players submit their bids
-  in secret. The highest bidder wins, and pays the amount they bid.
+- **[English auction](https://en.wikipedia.org/wiki/English_auction)**: The price starts low and increases as players bid. The highest bidder wins, and pays the 
+  amount they bid.
+- **[Sealed-bid auction](https://en.wikipedia.org/wiki/First-price_sealed-bid_auction)**: Players submit their bids in secret. The highest bidder wins, and pays the amount they 
+  bid.
 
   At the end of the auction, the bidders and their bids are revealed, unless they chose to make their bid anonymous
   (`/switchmarket bid <listing> <amount> anonymous`).
 
   If the highest price is tied, the winner is chosen randomly from the tied bidders.
-- **[Vickrey auction](https://en.wikipedia.org/wiki/Vickrey_auction)**: Players submit their bids in secret. The highest
-  bidder wins, but **pays the amount bid by the second-highest bidder**.
+- **[Vickrey auction](https://en.wikipedia.org/wiki/Vickrey_auction)**: Players submit their bids in secret. The highest bidder wins, but **pays the amount bid by 
+  the second-highest bidder**.
 
   At the end of the auction, the bidders and their bids are revealed, unless they chose to make their bid anonymous
   (`/switchmarket bid <listing> <amount> anonymous`).
 
   If the highest price is tied, the winner is chosen randomly from the tied bidders. They pay the next lowest price.
+
+  If the auction has a reserve price set, and the second-highest bid doesn't meet that reserve price, then the winner
+  pays the reserve price instead.
 
 ## Extension
 
