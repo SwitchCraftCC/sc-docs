@@ -286,6 +286,19 @@ Special dyed variants of the Elytra are also available, and can be crafted with 
   </tbody>
 </table>
 
+## Soft Toy Sharks
+<img src="/img/sc-goodies/dyeable_sharks.png" alt="Soft Toy Sharks in all 16 colors"
+title="Soft Toy Sharks in all 16 colors" style="float: right; margin-left: 16px" />
+
+Soft Toy Sharks, also known as BLÅHAJ, are available in all 16 dye colors. They're cuddly to hold.
+
+<div style="display: flex; gap: 16px; align-items: center;">
+  <img src="/img/sc-goodies/shark_trans.png" alt="Trans Soft Toy Shark" title="Trans Soft Toy Shark"/>
+  <p>A special variant of the Soft Toy Shark is also available.</p>
+</div>
+
+<div class="clearfix"></div>
+
 ## Ancient Tomes
 <img src="/img/sc-goodies/ancient_tome.png" alt="Ancient Tome" title="Ancient Tome"
   style="float: right; margin-left: 16px" />

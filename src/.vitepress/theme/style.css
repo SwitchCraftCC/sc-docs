@@ -160,3 +160,9 @@
 .VPImage.logo {
   image-rendering: pixelated;
 }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
