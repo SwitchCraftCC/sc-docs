@@ -337,3 +337,65 @@ Glass Item Frames are a see-through variant of the vanilla Item Frame. They can 
 with Glass Panes. Glow Glass Item Frames can be crafted by combining a Glass Item Frame with a Glow Ink Sac.
 
 Glass Item Frames also have special behavior for banners and shields placed inside them.
+
+## Extra Food
+
+::: info PLEADING
+Please don't PR any more food!!
+:::
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><ItemImg img="sc-goodies/popcorn" name="Popcorn" mid /></td>
+      <td>
+        A bottomless bag of popcorn. 
+        (<a href="https://github.com/SwitchCraftCC/sc-goodies/issues/4" target="_blank" rel="noopener noreferrer">
+          <em>currently unobtainable</em>
+        </a>)
+      </td>
+    </tr>
+    <tr>
+      <td><ItemImg img="sc-goodies/salami" name="Salami" mid /></td>
+      <td>Yummy salami</td>
+    </tr>
+    <tr>
+      <td><ItemImg img="sc-goodies/icecream_vanilla" name="Vanilla Ice Cream" mid /></td>
+      <td>A delicious treat!</td>
+    </tr>
+    <tr>
+      <td><ItemImg img="sc-goodies/icecream_chocolate" name="Chocolate Ice Cream" mid /></td>
+      <td>A delicious treat!</td>
+    </tr>
+    <tr>
+      <td><ItemImg img="sc-goodies/icecream_sweetberry" name="Sweet Berry Ice Cream" mid /></td>
+      <td>A delicious treat!</td>
+    </tr>
+    <tr>
+      <td><ItemImg img="sc-goodies/icecream_neapolitan" name="Neapolitan Ice Cream" mid /></td>
+      <td>Vanilla, Chocolate, and Sweet Berry.</td>
+    </tr>
+    <tr>
+      <td><ItemImg img="sc-goodies/icecream_spruce" name="Spruce Ice Cream" mid /></td>
+      <td>A refreshing treat!</td>
+    </tr>
+    <tr>
+      <td><ItemImg img="sc-goodies/icecream_melon" name="Melon Ice Cream" mid /></td>
+      <td>A delicious treat!</td>
+    </tr>
+    <tr>
+      <td><ItemImg img="sc-goodies/icecream_beetroot" name="Beetroot Ice Cream" mid /></td>
+      <td>An earthy treat!</td>
+    </tr>
+    <tr>
+      <td><ItemImg img="sc-goodies/icecream_sundae" name="Triple Gooberberry Sunrise" mid /></td>
+      <td>A suspiciously familiar sundae.</td>
+    </tr>
+  </tbody>
+</table>
