@@ -40,6 +40,13 @@ When you connect to the socket successfully, you will receive a `hello` payload 
   "type": "hello",
   "guest": false,
   "licenseOwner": "Yemmel",
+  "licenseOwnerUser": {
+    "type": "ingame",
+    "name": "Yemmel",
+    "displayName": "Yemmel",
+    "uuid": "07b382be-f2a8-4bf0-b9f5-c3a1b73c18c7",    
+    /* ... the rest of the User Object */ 
+  },
   "capabilities": ["tell", "read", "command", "say"]
 }
 ```

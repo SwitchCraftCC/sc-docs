@@ -32,6 +32,7 @@ more consistent. All events have been moved to the `event` packet.
 ### Fields
 
 - In the `hello` packet, `licenceOwner` has been renamed to `licenseOwner`.
+- **New 2024-03-11:** In the `hello` packet, `licenceOwnerUser` has been added.
 - In the `chat_discord` event, `discordID` has been renamed to `discordId`.
 - In the `chat_ingame`, `chat_discord` and `chat_chatbox` events, the `channel` field has been removed.
 - In the `event` packet, all `event` types are now snake_case instead of camelCase (e.g. `afkReturn` -> `afk_return`).
