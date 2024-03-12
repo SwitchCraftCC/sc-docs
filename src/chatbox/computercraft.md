@@ -258,7 +258,8 @@ Checks if the chatbox license has the specified capability. Valid capabilities:
 
 ### chatbox.getLicenseOwner()
 
-Returns the username of the player that owns this chatbox license.
+Returns the username and [user object](websocket.md#user-object) of the player that owns this chatbox license.
+
 
 ### chatbox.isConnected()
 
