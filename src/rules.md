@@ -247,7 +247,7 @@ Above all the rules, please use common sense, and be nice to other people.
   Stealing Krist in any way, from a player, a service/shop, or the server itself, is not allowed.
 </Rule>
 <Rule rule="6.4">
-  Abusing alt accounts to increase your Krist income (via faucet and daily login bonuses) is considered theft.
+  Abusing alt accounts to increase your Krist income (via any of our welfare systems) is considered theft.
 </Rule>
 <Rule rule="6.5">
   Redistributing paid software is considered piracy, and thus theft.
@@ -361,7 +361,7 @@ extended, or could be turned into a temporary ban.
   in this scenario.~~ (*Note:* This is currently not implemented.)
 - Using alt accounts to evade any punishment is forbidden and can result in a permanent ban on all associated accounts.
 - Using alt accounts to evade inter-player mutes (`/ignore`) is also not allowed.
-- Alt accounts **must** donate 100% of their Krist income from the server (starting balance, daily login bonus, faucet 
-  rewards) back to the server (`/welfare opt out` and then `/welfare return`). Not doing so is considered theft.
+- Alt accounts **must** donate 100% of their Krist income from the server (starting balance, any of our welfare systems) 
+  back to the server (`/welfare opt out` and then `/welfare return`). Not doing so is considered theft.
 - Bot accounts are no longer allowed on the server. Automated activity falls under Rule 3.4 and is not allowed.
   

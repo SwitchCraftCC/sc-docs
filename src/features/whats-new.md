@@ -67,7 +67,7 @@ Here is a high level overview of what to expect in SwitchCraft 3:
   - Names and metanames **can now be clicked in chat** to suggest the command `/pay example.kst`
   - (Experimental) [Krist URIs](https://docs.krist.dev/docs/uri.html) are now supported in chat and show rich KristWeb
     or `/pay` suggestions. Payment URIs may be supported in the future.
-  - Opt out of welfare (daily login bonus, faucet rewards) with `/welfare opt out` and `/welfare return`
+  - Opt out of welfare with `/welfare opt out` and `/welfare return`
   - Plugin-initiated payment requests
 - [SCPaste](https://p.sc3.io) - **Paste service written from scratch by [anemonemma](https://github.com/emmachase)**
   - Fully featured single-file code hosting solution designed specifically for ComputerCraft and SwitchCraft
