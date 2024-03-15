@@ -157,14 +157,22 @@ Hover Boots have no durability, and can be dyed by crafting them with a dye.
   style="float: right; margin-left: 16px" />
 
 The Item Magnet attracts nearby items to the player. It can be equipped in the "gloves" Trinket slot. The Item Magnet
-will disable itself if there is another player nearby with an active Item Magnet. It can also be disabled by pressing
-the Toggle Item Magnet hotkey (<kbd>M</kbd> by default).
+will disable itself if there is another player nearby with an active Item Magnet, or if there is an Item Frame with
+an Item Magnet in it nearby. It can also be disabled by pressing the Toggle Item Magnet hotkey (<kbd>M</kbd> by
+default).
 
 ### Range
 
 By default, the magnet attracts items within a 3 block radius. This can be upgraded by crafting the Item Magnet with
 a <ItemImg img="nether_star" name="Nether Star" /> and a <ItemImg img="netherite_ingot" name="Netherite Ingot" />. 
 Upgrades can be applied multiple times, increasing the range by 1 block each time, up to a maximum of 6 blocks.
+
+The range for disabling the magnet when another player with an active magnet is the range of the magnet plus 2 blocks.
+
+### Disabling with an Item Frame
+
+You can disable nearby players' Item Magnets by placing an Item Magnet in an Item Frame. It will disable nearby magnets
+even if the magnet in the frame itself is disabled (with <kbd>M</kbd>).
 
 ## Concrete and Slabs and Stairs
 
