@@ -72,7 +72,7 @@ format.
 - Print models are more efficiently cached, so chunks with lots of identical prints will only bake the print model once
     - Note that this is not the be-all and end-all of performance, there may still be a lot of vertex data to upload to
       the chunk
-- Prints can be crafted with beacon base blocks, honey block and glowstone items for additional features.
+- Prints can be crafted with beacon base blocks, honey blocks, and glowstone dust or blocks for additional features.
 
 ### .3dj format
 
@@ -83,7 +83,7 @@ There is an online .3dm to .3dj converter here: <https://3dj.lem.sh/>
 
 #### Example
 
-All arguments except for `shapesOff`, `shapesOn`, `bounds` are optional.
+All arguments except for `shapesOff`, `shapesOn`, and `bounds` are optional.
 
 ```json5
 {
