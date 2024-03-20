@@ -72,6 +72,7 @@ format.
 - Print models are more efficiently cached, so chunks with lots of identical prints will only bake the print model once
     - Note that this is not the be-all and end-all of performance, there may still be a lot of vertex data to upload to
       the chunk
+- Prints can be crafted with beacon base blocks, honey blocks, and glowstone dust or blocks for additional features.
 
 ### .3dj format
 
@@ -82,7 +83,7 @@ There is an online .3dm to .3dj converter here: <https://3dj.lem.sh/>
 
 #### Example
 
-All arguments except for `shapesOff`, `shapesOn`, `bounds` and `texture` are optional.
+All arguments except for `shapesOff`, `shapesOn`, and `bounds` are optional.
 
 ```json5
 {
@@ -115,15 +116,18 @@ All arguments except for `shapesOff`, `shapesOn`, `bounds` and `texture` are opt
 - `collideWhenOn`: (optional, boolean) Whether the 3D print is collidable when in the 'on' state.
 - `lightLevel`: (optional, number) The light level of the 3D print. Must be between 0 or 15, but values above 7 will
   be clamped to 7 unless the print is later crafted with glowstone dust.
+- `lightWhenOff`: (optional, boolean) Whether the 3D print emits light when in the 'off' state.
+- `lightWhenOn`: (optional, boolean) Whether the 3D print emits light when in the 'on' state.
 - `redstoneLevel`: (optional, number) The redstone level of the 3D print. Must be between 0 or 15.
 - `shapesOff`: (**required**, array of objects) The shapes of the 3D print when in the 'off' state. Each object in the array
-  must have a `bounds` property with the bounds of the shape, a `texture` property with the texture of the shape, and an
-  optional `tint` property with the tint of the shape, which may be a number or a hex string (`RRGGBB`).
+  must have a `bounds` property with the bounds of the shape, an optional `texture` property with the texture of the shape,
+  and an optional `tint` property with the tint of the shape, which may be a number or a hex string (`RRGGBB`).
     - `bounds`: (**required**, array of numbers) The bounds of the shape, in the format
       `[minX, minY, minZ, maxX, maxY, maxZ]`. Numbers must be between 0 and 16 inclusive (16 is the edge of the block).
-    - `texture`: (**required**, string) The texture of the shape, including the namespace. For example,
+    - `texture`: (optional, string) The texture of the shape, including the namespace. For example,
       `minecraft:block/stone` or `sc-peripherals:block/white`. Use the texture analyzer item to find the texture of a
-      block in the world. The `sc-peripherals:block/white` texture is available as a blank texture for tinting.
+      block in the world. The `sc-peripherals:block/white` texture is available as a blank texture for tinting. If
+      texture is not specified or empty string resulting shape is not rendered.
     - `tint`: (optional, number or string) The tint of the shape, as a hex string in the format `RRGGBB`, or a single
       decimal value.
 - `shapesOn`: (**required**, array of objects) Same as `shapesOff`, but for the 'on' state. To disallow state changes
@@ -218,7 +222,7 @@ For a practical example of the 3D Printer API, refer to the built-in
 [print3d program](https://github.com/SwitchCraftCC/sc-peripherals/blob/HEAD/src/main/resources/data/computercraft/lua/rom/programs/print3d.lua).
 :::
 
-### `printer.addShape(minX:number, minY:number, minZ:number, maxX:number, maxY:number, maxZ:number, texture:string[, state:boolean[, tint:number]])`
+### `printer.addShape(minX:number, minY:number, minZ:number, maxX:number, maxY:number, maxZ:number[, texture:string[, state:boolean[, tint:number]]])`
 
 ::: warning
 Using [`printer.addShapes`](#printer-addshapes-shapes-table) is preferred as it is significantly faster. Each individual
@@ -238,7 +242,7 @@ not have a volume of 0. A maximum of 128 shapes can be added to a shape set.
 | `maxX`    | `number`             | The maximum X coordinate of this shape, between 0 and 16 (inclusive)                                                                                                                                           |
 | `maxY`    | `number`             | The maximum Y coordinate of this shape, between 0 and 16 (inclusive)                                                                                                                                           |
 | `maxZ`    | `number`             | The maximum Z coordinate of this shape, between 0 and 16 (inclusive)                                                                                                                                           |
-| `texture` | `string`             | The texture identifier of this shape. Must be in the format `modid:path/texture`, e.g. `minecraft:block/sandstone`. You can right-click on any block with a Texture Analyzer to find the name of its textures. |
+| `texture` | `string` (optional)  | The texture identifier of this shape. Must be in the format `modid:path/texture`, e.g. `minecraft:block/sandstone`. You can right-click on any block with a Texture Analyzer to find the name of its textures. |
 | `state`   | `boolean` (optional) | The shape set to put this shape in, `false` for the "off" state and `true` for the "on" state. Defaults to `false`.                                                                                            |
 | `tint`    | `number` (optional)  | The color to tint this shape. Must be of the form `0xRRGGBB`. Defaults to `0xFFFFFF` (white).                                                                                                                  |
 
@@ -273,7 +277,7 @@ local shapes = {
 | 4         | `number`             | The maximum X coordinate of this shape, between 0 and 16 (inclusive)                                                                                                                                           |
 | 5         | `number`             | The maximum Y coordinate of this shape, between 0 and 16 (inclusive)                                                                                                                                           |
 | 6         | `number`             | The maximum Z coordinate of this shape, between 0 and 16 (inclusive)                                                                                                                                           |
-| `texture` | `string`             | The texture identifier of this shape. Must be in the format `modid:path/texture`, e.g. `minecraft:block/sandstone`. You can right-click on any block with a Texture Analyzer to find the name of its textures. |
+| `texture` | `string` (optional)  | The texture identifier of this shape. Must be in the format `modid:path/texture`, e.g. `minecraft:block/sandstone`. You can right-click on any block with a Texture Analyzer to find the name of its textures. |
 | `state`   | `boolean` (optional) | The shape set to put this shape in, `false` for the "off" state and `true` for the "on" state. Defaults to `false`.                                                                                            |
 | `tint`    | `number` (optional)  | The color to tint this shape. Must be of the form `0xRRGGBB`. Defaults to `0xFFFFFF` (white).                                                                                                                  |
 
@@ -357,6 +361,10 @@ by crafting the resulting print with glowstone dust.
 ### `printer.setRedstoneLevel(level:number)`
 
 Sets the redstone level of the print model. This must be between 0 and 15 (inclusive).
+
+### `printer.setStateLighting(lightWhenOff:boolean, lightWhenOn:boolean)`
+
+Sets whether the print model is emitting light in the "off" state and "on" state respectively.
 
 ### `printer.setTooltip([tooltip:string])`
 
