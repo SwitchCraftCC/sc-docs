@@ -349,7 +349,7 @@ Glass Item Frames also have special behavior for banners and shields placed insi
 ## Extra Food
 
 ::: info PLEADING
-Please don't PR any more food!!
+Please don't PR any more food or drink!!
 :::
 
 <table>
