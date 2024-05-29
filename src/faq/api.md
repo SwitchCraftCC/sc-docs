@@ -41,8 +41,9 @@ Returns the top 50 most active players on the server, excluding players who have
   "lastUpdated": "2022-10-22T20:50:45.6221607+01:00[Europe/London]", // The time the data was last updated
   "entries": [
     {
-      "name": "Lemmmy", // The username of the player
-      "time": 53010     // Their total active (non-AFK) time, in seconds
+      "uuid": "cdb33b76-a445-47a1-b13d-94f34e006243", // The UUID of the player
+      "name": "Lemmmy",                               // The username of the player
+      "time": 53010                                   // Their total active (non-AFK) time, in seconds
     },
     { /* ... */ }
   ]
