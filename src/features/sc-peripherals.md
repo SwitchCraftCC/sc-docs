@@ -42,7 +42,8 @@ custom posters to display in item frames.
 
 #### Posters
 - [Reference image to .2dj converter in Python](https://gist.github.com/SwitchCraft3/e6a59dab9a04807f5d035e4e72720524) (Official)
-- [Image to .2dj/.2dja converter](https://poster.madefor.cc/) (by [ShreksHellraiser (MasonGulu)](https://github.com/MasonGulu)) 
+- [Image to .2dj/.2dja converter](https://poster.madefor.cc/) (by [ShreksHellraiser (MasonGulu)](https://github.com/MasonGulu))
+- [Image to .2dj converter written in Rust](https:/github.com/PatriikPlays/img2poster) (by [GPLv3 (PatriikPlays)](https://github.com/PatriikPlays))
 
 ## 3D Printer
 
