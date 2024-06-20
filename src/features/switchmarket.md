@@ -11,7 +11,7 @@ Check the [SwitchMarket website](https://market.sc3.io) to see the current aucti
 
 To bid on an auction, you can use the `/switchmarket bid` command in-game. For example, to bid 15 KST on the auction
 "Lignum's Sugar Canes", you would run `/switchmarket bid lignums-sugar-canes 15`. You can also bid anonymously by
-adding `anonymous` at the end of the command.
+adding `anonymous` at the end of the command. Note that some auctions may not allow anonymous bidding.
 
 You will be prompted for confirmation, and then your bid will be taken from your in-game balance. If you are out-bid,
 your bid will be refunded to you immediately (English auction), or when the auction ends (sealed-bid auctions).
@@ -49,10 +49,11 @@ have the players draw lots and end the auction early.
 ## FAQ
 
 #### Can I bid anonymously?
-Yes, by bidding with `/switchmarket bid <listing> <amount> anonymous` (add `anonymous` at the end), your bid will be
-kept private. Your name will not be shown on the auction page, and your name will be replaced with "Anonymous" in the
-Discord logs. **However:** if you win the auction, when the claim is transferred to you, you will publicly become the
-owner of that claim.
+Depending on the auction, you may be able to bid anonymously. The auction page will specify if anonymous bidding is
+not allowed. If it is, run `/switchmarket bid <listing> <amount> anonymous` (add `anonymous` at the end), and your bid 
+will be kept private. Your name will not be shown on the auction page, and your name will be replaced with "Anonymous" 
+in the Discord logs. **However:** if you win the auction, when the claim is transferred to you, you will publicly become 
+the owner of that claim.
 
 #### Can I see a list of my current bids?
 Yes, by running `/switchmarket bids` in-game. This will list all of your current bids on active auctions.
