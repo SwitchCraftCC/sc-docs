@@ -205,6 +205,20 @@ Additionally, walking speed on any type of concrete (blocks, slabs, stairs) is 2
 Amethyst Slabs and Stairs are also available. They are crafted with the same recipe as the vanilla slabs and
 stairs.
 
+## Stair Wrench
+<img src="/img/sc-goodies/stair_wrench.png" alt="Stair Wrench" title="Stair Wrench"
+  style="float: right; margin-left: 16px" />
+
+The Stair Wrench is a tool that can be used to rotate stairs. Right-clicking a stair block with the wrench will change
+the state of the stairs. Shift-right-clicking will change the 'mode' of the wrench, according to the following modes:
+
+- Facing (North, East, South, West)
+- Half (Top, Bottom)
+- Shape (Straight, Inner Left, Inner Right, Outer Left, Outer Right)
+
+The mode is saved to each individual wrench and is displayed in the item's tooltip. A turtle can make use of a wrench
+by selecting it and using `turtle.place()`.
+
 ## Trees
 
 Three new tree types have been added to the game: Sakura Trees, Maple Trees, and Peppy Trees. They currently do not
