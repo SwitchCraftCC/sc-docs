@@ -4,6 +4,8 @@ title: API
 
 # API
 
+<!--@include: ../shutdown.md-->
+
 [[toc]]
 
 The server exposes a smattering of small HTTP API endpoints for use in your programs. All of these endpoints are

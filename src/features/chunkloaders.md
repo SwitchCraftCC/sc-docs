@@ -8,6 +8,8 @@ import KristValue from "../components/KristValue.vue";
 
 # Chunkloaders
 
+<!--@include: ../shutdown.md-->
+
 [[toc]]
 
 The chunkloading solution for SwitchCraft 3 is a custom Krist-based server-side chunkloader mod. View your chunkloader

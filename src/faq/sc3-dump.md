@@ -1,17 +1,21 @@
 ---
-title: SwitchCraft 2 Computer Dump
+title: SwitchCraft 3 Computer Dump
 ---
 
-# SwitchCraft 2 Computer Dump
+::: warning
+This page is a draft – all information is subject to change.
+:::
 
-You can download a .zip archive of your computers and homes from SwitchCraft 2 by running the `/sc2dump` command. The 
+# SwitchCraft 3 Computer Dump
+
+You can download a .zip archive of your computers and homes from SwitchCraft 3 by running the `/sc3dump` command. The 
 dump contains a listing of all your computers, and all their files in the computer directory. The server may take a few 
 moments to generate the archive, so please be patient.
 
 <div class="spread-lists">
 
-<a href="/img/sc2-dump-index.png" target="_blank">
-  <img src="/img/sc2-dump-index.png" alt="SwitchCraft 2 Computer Dump" 
+<a href="/img/sc3-dump-index.png" target="_blank">
+  <img src="/img/sc3-dump-index.png" alt="SwitchCraft 3 Computer Dump" 
     style="max-width: 280px; float: right; margin-left: 16px" />
 </a>
 
@@ -24,14 +28,14 @@ The archive contains:
   - `disk` - All your floppy disks, separated by ID
 
 The following locations were searched for items and placed blocks:
-- Your inventory
+- Your inventory, including Trinkets
 - Your ender chest
-- Your private ender storage frequencies
+- Your private Ender Storage frequencies
 - Blocks placed in claims that you own (e.g. computers and turtles)
 - Containers in claims that you own (e.g. chests, disk drives)
-- Entities in claims that you own (e.g. item frames, mobs with neural interfaces)
+- Entities in claims that you own (e.g. item frames)
 
-The scan is based off of the world data as of the end of SwitchCraft 2's world at December 27th 2022, 18:10 UTC.
+The scan is based off of the world data as of the end of SwitchCraft 3's world.
 
 ::: warning IMPORTANT
 **Do not share the .zip file or dump link with anyone**, as they may contain sensitive information such as Krist 
@@ -42,11 +46,11 @@ Things to note:
 - The archive only includes **claims that you own**. If you were just trusted in a claim (including manager trust), you
   will not receive the computers in that claim.
   - If there is a computer in a claim that you do not own that you would like access to, please contact the claim owner
-    to run `/sc2dump` and find the computer for you.
-  - Wolf Mall computers are not included in the dump.
+    to run `/sc3dump` and find the computer for you.
+  - Cat Mall and Coconut Mall computers are not included in the dump.
 - <b class="red-text">Do not share the .zip file or dump link with anyone</b>, as they may contain sensitive information 
   such as Krist passwords, private keys, and API tokens. 
-- The archive link will expire after 24 hours, but you can run `/sc2dump` again to get a new link.
+- The archive link will expire after 24 hours, but you can run `/sc3dump` again to get a new link.
 - Empty computers will be listed in the index, but will not have a folder in the archive.
 - **Extract the .zip file fully** before trying to open `index.html` in your browser.
 - [WinRAR](https://www.rarlab.com/download.htm) or [7-Zip](https://www.7-zip.org) is recommended to extract the archive 

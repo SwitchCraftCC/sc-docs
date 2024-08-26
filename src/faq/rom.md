@@ -4,6 +4,8 @@ title: ROM
 
 # ROM
 
+<!--@include: ../shutdown.md-->
+
 [View the ROM on GitHub](https://github.com/SwitchCraftCC/sc3-rom)
 
 Here is a list of programs currently included in the ComputerCraft ROM on SwitchCraft:

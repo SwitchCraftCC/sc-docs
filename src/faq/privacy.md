@@ -4,6 +4,8 @@ title: Privacy Policy
 
 # Privacy Policy
 
+<!--@include: ../shutdown.md-->
+
 [[toc]]
 
 **Effective May 06, 2023.**

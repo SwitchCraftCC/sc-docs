@@ -9,6 +9,8 @@ import ItemImg from "../components/ItemImg.vue";
 
 # What's New in SwitchCraft 3
 
+<!--@include: ../shutdown.md-->
+
 [[toc]]
 
 <div class="whats-new-listing spread-lists">

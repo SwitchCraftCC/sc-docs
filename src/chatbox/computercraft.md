@@ -4,6 +4,8 @@ title: ComputerCraft API
 
 # ComputerCraft API
 
+<!--@include: ../shutdown.md-->
+
 [[toc]]
 
 ## License registration

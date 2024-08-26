@@ -4,6 +4,8 @@ title: Pronouns
 
 # Pronouns
 
+<!--@include: ../shutdown.md-->
+
 [[toc]]
 
 The server supports showing your preferred pronouns in the tab list and above player names in-game. You can set your

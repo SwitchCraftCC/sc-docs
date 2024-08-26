@@ -4,6 +4,8 @@ title: Chatbox Introduction
 
 # Chatbox Introduction
 
+<!--@include: ../shutdown.md-->
+
 SwitchCraft uses a server-side chatbox system (instead of peripherals). This has several benefits:
 
 * The player does not need to craft any additional items to use a chatbox

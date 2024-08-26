@@ -67,6 +67,7 @@ export default defineConfig({
           { link: "/faq/pronouns", text: "Pronouns" },
           { link: "/faq/rom", text: "ROM" },
           { link: "/faq/sc2-dump", text: "SC2 Computer Dump" },
+          { link: "/faq/sc3-dump", text: "SC3 Computer Dump" },
           { link: "/faq/sodium", text: "Sodium & Indium" },
           { link: "/faq/supporter", text: "Supporter" },
         ]

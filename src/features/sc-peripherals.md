@@ -8,6 +8,8 @@ import ColorName from "../components/ColorName.vue";
 
 # sc-peripherals
 
+<!--@include: ../shutdown.md-->
+
 ::: tip
 Quick link to .3dm to .3dj converter: <https://3dj.lem.sh/>
 :::

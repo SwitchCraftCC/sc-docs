@@ -10,6 +10,8 @@ import KristValue from "./components/KristValue.vue";
 
 # Rules
 
+<!--@include: ./shutdown.md-->
+
 Above all the rules, please use common sense, and be nice to other people.
 
 <div class="rules-list [&_h3]:!mt-8 [&_h3]:!mb-4">

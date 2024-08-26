@@ -4,6 +4,8 @@ title: Changes in v2
 
 # Changes in v2
 
+<!--@include: ../shutdown.md-->
+
 [[toc]]
 
 Version 2 of the Chatbox API, prepared for SwitchCraft 3, focuses on internal codebase improvements and making the API 

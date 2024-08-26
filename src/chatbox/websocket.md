@@ -4,6 +4,8 @@ title: Websocket API
 
 # Websocket API
 
+<!--@include: ../shutdown.md-->
+
 [[toc]]
 
 ## Connection

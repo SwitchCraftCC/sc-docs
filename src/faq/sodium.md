@@ -4,6 +4,8 @@ title: Sodium & Indium
 
 # Sodium & Indium
 
+<!--@include: ../shutdown.md-->
+
 [[toc]]
 
 ### Why doesn't SwitchCraft ship with Sodium and Indium?

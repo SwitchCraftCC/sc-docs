@@ -8,6 +8,8 @@ import NYI from "../components/NYI.vue";
 
 # Plethora 1.20.1
 
+<!--@include: ../shutdown.md-->
+
 [View Plethora-Fabric on GitHub](https://github.com/SwitchCraftCC/Plethora-Fabric)
 
 Plethora-Fabric is a port of [Plethora](https://github.com/SquidDev-CC/plethora) for [Fabric](https://fabricmc.net/) 

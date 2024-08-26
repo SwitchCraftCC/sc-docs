@@ -4,6 +4,8 @@ title: ClaimKit
 
 # ClaimKit
 
+<!--@include: ../shutdown.md-->
+
 ClaimKit is SwitchCraft's land claim plugin. Its features and interface should be familiar for SwitchCraft 2 players.
 
 The tools needed to create ClaimKit claims can be acquired by running `/kit ck`.

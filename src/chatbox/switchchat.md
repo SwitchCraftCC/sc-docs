@@ -4,6 +4,8 @@ title: SwitchChat v3
 
 # SwitchChat v3
 
+<!--@include: ../shutdown.md-->
+
 [![npm version](https://badge.fury.io/js/switchchat.svg)](https://www.npmjs.org/package/switchchat)
 
 [SwitchChat](https://www.npmjs.com/package/switchchat) is a JavaScript/TypeScript library for interacting with the 

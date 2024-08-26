@@ -2,6 +2,10 @@
 title: SwitchMarket
 ---
 
+# SwitchMarket
+
+<!--@include: ../shutdown.md-->
+
 [SwitchMarket](https://market.sc3.io) is a website provided by the server to allow players to auction and buy claims on
 the server. Currently, its primary use is to auction unused land around spawn.
 

@@ -8,6 +8,8 @@ import SupporterTag from "../components/SupporterTag.vue";
 
 # Supporters
 
+<!--@include: ../shutdown.md-->
+
 Players with this <SupporterTag :tier="1" /> tag appearing next to their name in chat and the tablist are 
 <span style="color: #55FFFF">SwitchCraft Supporters</span>. This means that they have paid to help keep the server 
 online. If you would like to buy <span color="#AAAAFF">Supporter</span> status, visit:
