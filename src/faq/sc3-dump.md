@@ -14,11 +14,6 @@ moments to generate the archive, so please be patient.
 
 <div class="spread-lists">
 
-<a href="/img/sc3-dump-index.png" target="_blank">
-  <img src="/img/sc3-dump-index.png" alt="SwitchCraft 3 Computer Dump" 
-    style="max-width: 280px; float: right; margin-left: 16px" />
-</a>
-
 The archive contains:
 - An `index.html` file that can be opened in a web browser to view and search the contents of the archive
 - An `index.json` file containing even more information than the HTML file, but in a machine-readable format
