@@ -2,10 +2,6 @@
 title: SwitchCraft 3 Computer Dump
 ---
 
-::: warning
-This page is a draft – all information is subject to change.
-:::
-
 # SwitchCraft 3 Computer Dump
 
 You can download a .zip archive of your computers and homes from SwitchCraft 3 by running the `/sc3dump` command. The 
